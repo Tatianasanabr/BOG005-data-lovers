@@ -76,24 +76,29 @@ header a :hover {
 
 #hero {
   display: flex;
-  align-items: center;
+  align-items:center;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  height: 90vh;
+  height: 70vh;
   background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(img/imageninicial.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position:0px 80px;
 }
 
-#hero h1 {
-  color: white;
+#hero h3 {
+  color: rgba(236, 180, 25, 0.664);
+  padding: 80px;
+    
 }
 
 #hero button {
   text-align: center;
-  padding: 200px 12px;
+  padding: 10px 20px;
+  background-color: rgb(197, 163, 12);
+  color:rgb(15, 49, 141);
+  border-radius: 50px;
 }
 
 #somos-proya .container {
@@ -203,7 +208,7 @@ footer .container {
     background-size: cover;
     background-position: center center;
     height: 500px;
-    width: 400px;
+    width: 445px;
   }
 
   #nuestros-programas .programas {
