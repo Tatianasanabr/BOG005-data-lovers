@@ -221,21 +221,6 @@ attackChampion.innerHTML = ` Average Attack Damage: "${calculoStats(
 
 /*console.log(lol.data.Aatrox.id);*/
 
-//Función Menú toggle//
-
-/*let menutoggle = document.querySelector(".menutoggle");
-let navMenu = document.querySelector(".nav-menu");
-
-
-menutoggle.addEventListener("click", ()=> {
-  menutoggle.classList.toggle("active"); 
-  navMenu.classList.toggle("active"); 
-  })
-
-  document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click",() => {
-    menutoggle.classList.remove("active");
-    navMenu.classList.remove("active");
-  }))*/
 
 //Mostrar y ocultar contenido página Bienvenida//
 let BotonConoceMas = document.getElementById("conoceMas");
@@ -243,8 +228,8 @@ BotonConoceMas.addEventListener("click", mostrarConoceMas);
 
 function mostrarConoceMas() {
   document.getElementById("detallesLol").style.display = "block";
-  document.getElementById("hero").style.display = "none";
-  document.getElementById("somos-proya").style.display = "none";
+  document.getElementById("bienvenida").style.display = "none";
+  document.getElementById("queEsLol").style.display = "none";
 }
 
 //Mostrar y ocultar contenido página Conoce más//
@@ -253,7 +238,7 @@ BotonConoceCampeones.addEventListener("click", mostrarCampeones);
 
 function mostrarCampeones() {
   document.getElementById("campeones").style.display = "block";
-  document.getElementById("hero").style.display = "none";
-  document.getElementById("somos-proya").style.display = "none";
+  document.getElementById("bienvenida").style.display = "none";
+  document.getElementById("queEsLol").style.display = "none";
   document.getElementById("detallesLol").style.display = "none";
 }
