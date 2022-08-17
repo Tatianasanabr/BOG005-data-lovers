@@ -1,81 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <!-- <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/> -->
-    <title>Data Lovers - LOL</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/Logo.png" />
-    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>LOL</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="img/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="container" id="container">               
-        <nav>
-          <a class="logo">Tat&Sof Inc.</a>               
-          <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Conoce más</a></li>
-          <li><a href="#">Campeones</a></li>
-          <li><a href="#">Novedades</a></li>
-          <li><a href="#">Estadísticas</a></li>
-          </ul> 
-          <div class="menutoggle">
-            <i class="fas fa-bars"></i> 
-          </div>        
-        </nav>        
-      </div>
-    </header> 
-
-    <section id="hero">
-      <h3>Bienvenido <br> ¿Estás interesado en descubrir en que consiste uno de los juegos más populares del mundo gamer y hacer parte de los más de 
-        100 millones de usuarios activos? <br> Si estás listo, ¡Vamos a conocer más!.</h3>
-    <button id="conoceMas">Conoce más</button>
-    </section>
-
-    <section id="somos-proya">
-      <div class="container">
-      <div class="img-container"></div>
-      <div class="texto">
-        <h2>Curiosidades LOL</h2>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, eaque quo, doloribus odit a inventore facilis iure ullam eum quae nam optio temporibus enim vel assumenda, magnam distinctio! Nesciunt, libero?</P>
-      </div>
-    </div>
-    </section>
-
-    <section id="nuestros-programas">
-      <div class="container"></div>
-      <h2>Nuestros Programas</h2>
-      <div class="carta">
-        <h3>¿Qué es?</h3>
-        <p>League of Legends es un juego de estrategia por equipos en el que dos equipos conformados por cinco poderosos campeones se enfrentan para destruir la base del otro. Elige de entre más de 140 campeones para realizar jugadas épicas, asegurar asesinatos y destruir torretas mientras avanzas hacia la victoria.</p>
-      </div>
-      <div class="carta">
-        <h3>Objetivos de partida</h3>
-        <p>Cada equipo cuenta con una base, donde hay un Nexo. El objetivo de la partida es defender tu Nexo y destruir el del rival. Para ello tenemos que ayudar a nuestras tropas a destruir la fortaleza enemiga. Las tres calles o líneas que unen ambos Nexos y por donde se mueven los esbirros cuentan con dos torres exteriores, una que protege la entrada y dos más que protegen el Nexo. En total cada equipo cuenta con 11 torres.</p>
-      </div>
-      <div class="carta">
-        <h3>Campeones</h3>
-        <p>En LOL los personajes con los que vas a jugar son conocidos como “Campeones”, cada uno cuenta con una historia, estilo de juego y habilidades diferentes, cuando comienzas a jugar tu campeón será nivel 1 y podrás escoger una de las tres habilidades básicas con las que cuenta tu campeón, sin embargo, tu campeón también contará con dos habilidades más, una pasiva y la otra definitiva, la pasiva es propia de el y no tendrás que gastar puntos de habilidad para aprenderla, lo mismo no ocurre con la definitiva, a esta solo accederás al llegar al nivel 6.</p>
-      </div>
-      <div class="carta">
-        <h3>Objetos</h3>
-        <p>Los objetos sirven para incrementar de forma considerable los atributos de nuestro campeón. Cualquier campeón, por lo general, puede comprar cualquier objeto, pero no todos los objetos tienen utilidad para todos los campeones. Por ejemplo, un campeón que haga casi todo su daño con golpes básicos tendrá que comprar objetos que mejoren el daño, el impacto crítico y la velocidad de ataque.</p>
-      </div>
-      <div class="carta">
-        <h3>Jungla</h3>
-        <p>La jungla es un espacio neutral en el que encontrarás monstruos que solo te atacarán si tu lo haces primero, es un buen sitio para acorralar a un rival, en este caso, los monstruos actúan como esbirros, así que combatiendo con ellos obtendrás experiencia y oro cuando acabas con ellos, sin embargo, los que más te van a dar bonificaciones fuertes son los monstruos Dragón y Baron Nashor.</p>
-      </div>
-      <div class="carta">
-        <h3>Posiciones</h3>
-        <p>A medida que vas subiendo de nivel las posiciones de League of Legends son básicas si queremos ganar una partida. Los jugadores se reparten de la siguiente forma: uno a la calle superior (toplaner), uno a la calle central (midlaner), dos a la calle inferior (AD Carry y support) y el quinto a la jungla (jungla). Cada posición tiene muy definidos el tipo de campeones.</p>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <a href="#" class="enlace">
+        <img src="img/logo.png" alt="" class="logo">
+      </a>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Portafolio</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <!--primera pantalla campeones (buscar-ordenar)-->
+  <section class="principal">
+    <div id="pantalla1">
+      <div id="cantidad" class="cantidadMostrada"></div>
+      <section class="lista">
+      <div id="galeria" class="galeriaDeCampeones"></div>  
+      </section>
+      <div id="error" class="ocultar">
+        <p>No results found</p>
       </div>
     </div>
   </section>
-    <footer>
-      <p>All rights reserved ®</p>
-    </footer>
-    <div id="root"></div>
+  <footer>
+    <p>ALL RIGHTS RESERVED - TAT&SOF INC</p>
+  </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
