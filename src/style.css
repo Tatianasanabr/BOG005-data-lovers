@@ -97,8 +97,7 @@ li a.active, li a:hover {
   padding: 20px;
   background-color: rgba(18, 152, 170, 0.6);
   border-radius: 20px;
-  margin: 50px;
-  margin-top: 100px;  
+  margin: 25px; 
 }
 
 
@@ -201,7 +200,7 @@ footer {
 }
 
 .imagenCampeon {
-  width: 25em;
+  width: 20em;
   height: auto;
   border: solid 2px #eef1efb2;
   border-radius: 20%; 
