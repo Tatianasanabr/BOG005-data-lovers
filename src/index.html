@@ -1,45 +1,171 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>LOL</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" href="img/logo.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+    <title>Data Lovers - LOL</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/Logo.png" />
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+
   </head>
+
   <body>
-    <nav>
+
+    <nav class = "menu1">
       <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
+      <label for= "check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
+
       <a href="#" class="enlace">
-        <img src="img/logo.png" alt="" class="logo">
+        <img src = "img/Logo.png" alt="" class="logo">
       </a>
+
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Portafolio</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#" class="nav-link">Inicio</a></li>
+        <li><a href="#" class="nav-link">Conoce más</a></li>
+        <li><a href="#" class="nav-link">Campeones</a></li>
+        <li><a href="#" class="nav-link">Novedades</a></li>
+        <li><a href="#" class="nav-link">Estadísticas</a></li>
       </ul>
-    </nav>
-    <!--primera pantalla campeones (buscar-ordenar)-->
-  <section class="principal">
-    <div id="pantalla1">
-      <div id="cantidad" class="cantidadMostrada"></div>
-      <section class="lista">
-      <div id="galeria" class="galeriaDeCampeones"></div>  
-      </section>
-      <div id="error" class="ocultar">
-        <p>No results found</p>
+    </nav>   
+
+<!--Información pagina 1 página de Bienvenida y Curiosidades LOL-->
+
+    <section id="bienvenida">
+      <div class="contBienvenida">
+      <h3>¡Bienvenid@! <br> ¿Estás interesad@ en descubrir en que consiste uno de los juegos más populares del mundo gamer y hacer parte de los más de
+        100 millones de usuarios activos? <br> Si estás list@, ¡Vamos a conocer más!.</h3>
+      </div>
+    <button id="conoceMas"><b>Conoce más</b></button>
+    </section>
+
+    <section id="queEsLol">
+      <div class="container">
+      <div class="img-container"></div>
+      <div class="texto">
+        <h2>¿Qué es LOL?</h2>
+        <br>
+        <P>League of Legends es un juego de estrategia por equipos en el que dos equipos conformados por cinco poderosos campeones se enfrentan para destruir la base del otro. Elige de entre más de 140 campeones para realizar jugadas épicas, asegurar asesinatos y destruir torretas mientras avanzas hacia la victoria.</P>       
       </div>
     </div>
+    </section>
+
+<!--Información pagina 2 informacion LOL"Conoce más"-->
+
+    <section id="detallesLol">
+      <div class="container"></div>
+      <h2>¡Lo que debes saber!</h2>    
+      <div class="carta">
+        <h3>Objetivos de partida</h3>
+        <p>Cada equipo cuenta con una base, donde hay un Nexo. El objetivo de la partida es defender tu Nexo y destruir el del rival. Para ello tenemos que ayudar a nuestras tropas a destruir la fortaleza enemiga. Las tres calles o líneas que unen ambos Nexos y por donde se mueven los esbirros cuentan con dos torres exteriores, una que protege la entrada y dos más que protegen el Nexo. En total cada equipo cuenta con 11 torres.</p>
+      </div>
+      <div class="carta">
+        <h3>Campeones</h3>
+        <p>En LOL los personajes con los que vas a jugar son conocidos como “Campeones”, cada uno cuenta con una historia, estilo de juego y habilidades diferentes, cuando comienzas a jugar tu campeón será nivel 1 y podrás escoger una de las tres habilidades básicas con las que cuenta tu campeón, sin embargo, tu campeón también contará con dos habilidades más, una pasiva y la otra definitiva, la pasiva es propia de el y no tendrás que gastar puntos de habilidad para aprenderla, lo mismo no ocurre con la definitiva, a esta solo accederás al llegar al nivel 6.</p>
+      </div>
+      <div class="carta">
+        <h3>Objetos</h3>
+        <p>Los objetos sirven para incrementar de forma considerable los atributos de nuestro campeón. Cualquier campeón, por lo general, puede comprar cualquier objeto, pero no todos los objetos tienen utilidad para todos los campeones. Por ejemplo, un campeón que haga casi todo su daño con golpes básicos tendrá que comprar objetos que mejoren el daño, el impacto crítico y la velocidad de ataque.</p>
+      </div>
+      <div class="carta">
+        <h3>Jungla</h3>
+        <p>La jungla es un espacio neutral en el que encontrarás monstruos que solo te atacarán si tu lo haces primero, es un buen sitio para acorralar a un rival, en este caso, los monstruos actúan como esbirros, así que combatiendo con ellos obtendrás experiencia y oro cuando acabas con ellos, sin embargo, los que más te van a dar bonificaciones fuertes son los monstruos Dragón y Baron Nashor.</p>
+      </div>
+      <div class="carta">
+        <h3>Posiciones</h3>
+        <p>A medida que vas subiendo de nivel las posiciones de League of Legends son básicas si queremos ganar una partida. Los jugadores se reparten de la siguiente forma: uno a la calle superior (toplaner), uno a la calle central (midlaner), dos a la calle inferior (AD Carry y support) y el quinto a la jungla (jungla). Cada posición tiene muy definidos el tipo de campeones.</p>
+      </div>
+    </div>
+    <br>
+    <button id="conoceLosCampeones"><b>Conoce los Campeones</b></button>
   </section>
-  <footer>
-    <p>ALL RIGHTS RESERVED - TAT&SOF INC</p>
-  </footer>
+
+<!--Información pagina 3 "Conoce los campeones"-->
+
+  <section id="campeones">
+    <nav class = "menu2">
+      <div class="buscador">
+        <input type="search" id="buscador" class="buscadorCampeon" placeholder="Busca por campeon" autocomplete="off">
+        <img src="img/search-regular-24.png" alt="buscar">
+      </div>
+      <button id="todosCampeones" class ="todosCampeones">TODOS</button>
+      <button id="roles" class ="roles">ROLES</button>
+      <select id="buttonOrder">
+      <option value= ""  disabled selected>ORDENAR</option>
+      <option value="a-z">A - Z</option>
+      <option value="z-a">Z - A</option>
+      </select>
+      <button id="estadisticas" class ="estadisticas">ESTADISTICAS</button>
+    </nav>
+
+<!--Información pagina 3 visualizar todos los campeones-->
+<!--  <section div="verCampeones"> 
+
+    <div id="cantidad" class="cantidadMostrada">
+    </div>
+    <section class="listado">
+      <div id="galeriaCampeones" class="galeriaCampeones"></div>     
+    </section>
+
+    <div id="error" class="ocultar">
+      <p>Resultado No encontrado</p>
+    </div>
+  </section>
+
+   <div class="subirLista">
+    <div class="botonSubir">
+      <img src="img/boton arriba.png" alt="subir">
+    </div>
+   </div> -->
+
+   <main id="container"></main>
+   <div id="myModal" class="modal hide">
+    <div class="modalContent">
+      <span class="close" id="close">&times;</span>
+      <div class="modalInfo" id="modalInfo">
+      </div>
+      </div>
+    </div>
+
+<!--Información pagina 3 visualizar los roles-->
+
+
+ <section id="verRoles" class="ocultar">
+  <section id="seccionRoles" class="seccionRoles">
+    <div class="rol"><input type="image" id="asesinos" value ="asesinos" class="asesinos" src="img/role-icon-assassin.png"><p class="pRoles">ASESINOS</p></div>
+    <div class="rol"><input type="image" id="magos" value ="magos" class="magos" src="img/Mage_icon.png"><p class="pRoles">MAGOS</p></div>
+    <div class="rol"><input type="image" id="tiradores" value ="tiradores" class="tiradores" src="img/role_icon_marksman.png" class="pRoles">TIRADORES</p></div>
+    <div class="rol"><input type="image" id="soporte" value ="soporte" class="soportet" src="img/role_icon_support.png"><p class="pRoles">SOPORTE</p></div>
+    <div class="rol"><input type="image" id="tanque" value ="tanque" class="tanque" src="img/Tanque.png"><p class="pRoles">TANQUE</p></div>
+    <div class="rol"><input type="image" id="luchadores" value ="luchadores" class="luchadores" src="img/league-of-legends-fighter-icon-1.png"><p class="pRoles">LUCHADORES</p></div>
+  </section>
+</section>
+
+<!--Información pagina 3 visualizar los campeones por roles-->
+
+<section id="campeonesxrol" class="ocultar">
+  <div class="detalleCampeon" class="detalleCampeon"></div>
+</section>
+
+<!--Información pagina 3 visualizar las estadisticas-->
+
+<section id="estadisticas" class="ocultar">
+  <div class="secEstaditicas">
+    <div class="divMapLo1">
+      <div id="hpChampion" class="hpchampions styleAverage"></div>
+      <div id="movespeedChampion" class="attackChampion styleAverage"></div>
+  </div>
+  <div class="divMapLo1"><img src= "img/fondo.png" class="mapLo1" alt="mapLo1"></div>
+</div>  
+</section>
+</section>
+    <footer>
+      <p>All rights reserved ®</p>
+    </footer>
+    <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
