@@ -1,27 +1,26 @@
 /*console.log(lol.data.Aatrox.blurb);*/
-//Importacion información nombres campeones
 
+//Importacion información nombres campeones
 import lol from './data/lol/lol.js';
-import { 
+
+import {  
   alphabetOrder,
   roleFilter,
 } from './data.js';
 
-const dataLol = (lol.data); 
+ const dataLol = (lol.data);
 
-//Declaramos las variables - Manipulación dinamica del DOM
 
+ //Declaramos las variables - Manipulación dinamica del DOM
 const viewChampions = document.getElementById("viewChampions");
 const container= document.getElementById("container");
 const myModal = document.getElementById("myModal");
 const text = document.getElementById("text");
 
 const data = Object.values(dataLol);
-
 const showData = (parametro) => {
-
   let show = "";
-  parametro.forEach((element) => { 
+  parametro.forEach((element) => {  
   const campeones = `
   <div class="champ" data-id=${element.id} name="champion">
   <img src = ${element.splash} data-id=${element.id} class="splash"/>
@@ -30,7 +29,6 @@ const showData = (parametro) => {
   `;
   show += campeones;
 });
-
 container.innerHTML = show;
 };
 
@@ -78,17 +76,10 @@ function mostrarConoceMas() {
 //Mostrar y ocultar contenido página Conoce más//
 let BotonConoceCampeones = document.getElementById("conoceLosCampeones");
 BotonConoceCampeones.addEventListener("click", mostrarCampeones);
+
 function mostrarCampeones() {
   document.getElementById("campeones").style.display = "block";
   document.getElementById("bienvenida").style.display = "none";
   document.getElementById("queEsLol").style.display = "none";
   document.getElementById("detallesLol").style.display = "none";
 }
-
-// Ordenar (A-Z / Z-A)
-const buttonOrder = document.querySelector('#buttonOrder');
-buttonOrder.addEventListener('change', () => {
-  const valueOrder = buttonOrder.value;
-  container.innerHTML = '';
-  showData(alphabetOrder(data, valueOrder));
-});

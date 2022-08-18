@@ -18,11 +18,9 @@
       <label for= "check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-
       <a href="#" class="enlace">
         <img src = "img/Logo.png" alt="" class="logo">
       </a>
-
       <ul>
         <li><a href="#" class="nav-link">Inicio</a></li>
         <li><a href="#" class="nav-link">Conoce más</a></li>
@@ -30,13 +28,12 @@
         <li><a href="#" class="nav-link">Novedades</a></li>
         <li><a href="#" class="nav-link">Estadísticas</a></li>
       </ul>
-    </nav>   
+    </nav>    
 
 <!--Información pagina 1 página de Bienvenida y Curiosidades LOL-->
-
     <section id="bienvenida">
       <div class="contBienvenida">
-      <h3>¡Bienvenid@! <br> ¿Estás interesad@ en descubrir en que consiste uno de los juegos más populares del mundo gamer y hacer parte de los más de
+      <h3>¡Bienvenid@! <br> ¿Estás interesad@ en descubrir en que consiste uno de los juegos más populares del mundo gamer y hacer parte de los más de 
         100 millones de usuarios activos? <br> Si estás list@, ¡Vamos a conocer más!.</h3>
       </div>
     <button id="conoceMas"><b>Conoce más</b></button>
@@ -48,13 +45,12 @@
       <div class="texto">
         <h2>¿Qué es LOL?</h2>
         <br>
-        <P>League of Legends es un juego de estrategia por equipos en el que dos equipos conformados por cinco poderosos campeones se enfrentan para destruir la base del otro. Elige de entre más de 140 campeones para realizar jugadas épicas, asegurar asesinatos y destruir torretas mientras avanzas hacia la victoria.</P>       
+        <P>League of Legends es un juego de estrategia por equipos en el que dos equipos conformados por cinco poderosos campeones se enfrentan para destruir la base del otro. Elige de entre más de 140 campeones para realizar jugadas épicas, asegurar asesinatos y destruir torretas mientras avanzas hacia la victoria.</P>        
       </div>
     </div>
     </section>
 
 <!--Información pagina 2 informacion LOL"Conoce más"-->
-
     <section id="detallesLol">
       <div class="container"></div>
       <h2>¡Lo que debes saber!</h2>    
@@ -82,39 +78,39 @@
     <br>
     <button id="conoceLosCampeones"><b>Conoce los Campeones</b></button>
   </section>
-
+  
 <!--Información pagina 3 "Conoce los campeones"-->
-
   <section id="campeones">
+
     <nav class = "menu2">
       <div class="buscador">
         <input type="search" id="buscador" class="buscadorCampeon" placeholder="Busca por campeon" autocomplete="off">
         <img src="img/search-regular-24.png" alt="buscar">
+
       </div>
       <button id="todosCampeones" class ="todosCampeones">TODOS</button>
       <button id="roles" class ="roles">ROLES</button>
-      <select id="buttonOrder">
-      <option value= ""  disabled selected>ORDENAR</option>
-      <option value="a-z">A - Z</option>
-      <option value="z-a">Z - A</option>
+      <select name="opciones" id="ordenar" class ="ordenar">
+      <option value = "" selected disabled class="btn-ordenar">ORDENAR</option>
+      <option value = "ascendente" class="btn-AZ">A - Z</option>
+      <option value = "descendente" class="btn-ZA">Z - A</option>
       </select>
       <button id="estadisticas" class ="estadisticas">ESTADISTICAS</button>
     </nav>
+  
 
-<!--Información pagina 3 visualizar todos los campeones-->
-<!--  <section div="verCampeones"> 
+ <!--Información pagina 3 visualizar todos los campeones--> 
 
+<!--  <section div="verCampeones">  
     <div id="cantidad" class="cantidadMostrada">
     </div>
     <section class="listado">
-      <div id="galeriaCampeones" class="galeriaCampeones"></div>     
+      <div id="galeriaCampeones" class="galeriaCampeones"></div>      
     </section>
-
     <div id="error" class="ocultar">
       <p>Resultado No encontrado</p>
     </div>
   </section>
-
    <div class="subirLista">
     <div class="botonSubir">
       <img src="img/boton arriba.png" alt="subir">
@@ -130,21 +126,21 @@
       </div>
     </div>
 
-<!--Información pagina 3 visualizar los roles-->
 
-
+ <!--Información pagina 3 visualizar los roles-->
+ 
  <section id="verRoles" class="ocultar">
   <section id="seccionRoles" class="seccionRoles">
     <div class="rol"><input type="image" id="asesinos" value ="asesinos" class="asesinos" src="img/role-icon-assassin.png"><p class="pRoles">ASESINOS</p></div>
     <div class="rol"><input type="image" id="magos" value ="magos" class="magos" src="img/Mage_icon.png"><p class="pRoles">MAGOS</p></div>
-    <div class="rol"><input type="image" id="tiradores" value ="tiradores" class="tiradores" src="img/role_icon_marksman.png" class="pRoles">TIRADORES</p></div>
+    <div class="rol"><input type="image" id="tiradores" value ="tiradores" class="tiradores" src="img/role_icon_marksman.png" class="pRoles">TIRADORES</p></div> 
     <div class="rol"><input type="image" id="soporte" value ="soporte" class="soportet" src="img/role_icon_support.png"><p class="pRoles">SOPORTE</p></div>
-    <div class="rol"><input type="image" id="tanque" value ="tanque" class="tanque" src="img/Tanque.png"><p class="pRoles">TANQUE</p></div>
-    <div class="rol"><input type="image" id="luchadores" value ="luchadores" class="luchadores" src="img/league-of-legends-fighter-icon-1.png"><p class="pRoles">LUCHADORES</p></div>
+    <div class="rol"><input type="image" id="tanque" value ="tanque" class="tanque" src="img/Tanque.png"><p class="pRoles">TANQUE</p></div> 
+    <div class="rol"><input type="image" id="luchadores" value ="luchadores" class="luchadores" src="img/league-of-legends-fighter-icon-1.png"><p class="pRoles">LUCHADORES</p></div> 
   </section>
-</section>
+ </section>
 
-<!--Información pagina 3 visualizar los campeones por roles-->
+ <!--Información pagina 3 visualizar los campeones por roles-->
 
 <section id="campeonesxrol" class="ocultar">
   <div class="detalleCampeon" class="detalleCampeon"></div>
@@ -159,7 +155,7 @@
       <div id="movespeedChampion" class="attackChampion styleAverage"></div>
   </div>
   <div class="divMapLo1"><img src= "img/fondo.png" class="mapLo1" alt="mapLo1"></div>
-</div>  
+</div>   
 </section>
 </section>
     <footer>

@@ -1,784 +1,423 @@
 * {
-
   box-sizing: border-box;
-
   margin: 0;
-
   padding: 0;
-
   text-decoration: none;
-
   list-style: none;
-
 }
-
- 
 
 html {
-
   scroll-behavior: smooth;
-
 }
-
- 
 
 body {
-
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
   margin: 0;
-
   display: flex;
-
   flex-direction: column;
-
   min-height: 100%;
-
   background-color: white;
-
 }
-
- 
-
- 
 
 .container {
-
   margin: auto; 
-
 }
-
- 
 
 .menu1 {
-
   background-color: #0b4f7c;
-
   height: 80px;
-
   width: 100%;
-
   cursor: pointer;
-
 }
-
- 
 
 .enlace {
-
   position: absolute;
-
   padding: 20px 50px;
-
 }
-
- 
 
 .logo {
-
   height: 40px;
-
 }
-
- 
 
 .menu1 ul {
-
   float: right;
-
   margin-right: 20px;
-
 }
-
- 
 
 .menu1  ul li{
-
   display: inline-block;
-
   line-height: 80px;
-
   margin: 0px 5px;
-
 }
-
- 
 
 .menu1  ul li a {
-
   color: white;
-
   font-size: 18px;
-
   padding: 7px 13px;
-
   border-radius: 3px;
-
   text-transform: uppercase;
-
 }
-
- 
 
 li a.active, li a:hover {
-
   background: #136675;
-
   transition: 0.5s; 
-
 }
-
- 
 
 .checkbtn {
-
   font-size: 30px;
-
   color: white;
-
   float: right;
-
   line-height: 80px;
-
   margin-right: 40px;
-
   cursor: pointer;
-
   display: none;
-
 }
-
- 
 
 #check {
-
   display: none;
-
 }
-
- 
-
- 
 
 #bienvenida {
-
   display: flex;
-
   align-items:center;
-
   justify-content: center;
-
   text-align: center;
-
   flex-direction: column;
-
   height: 75vh;
-
   background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(img/imageninicial.png);
-
   background-repeat: no-repeat;
-
   background-size: cover;
-
- 
-
 }
-
- 
 
 .contBienvenida{
-
   color: rgba(63, 46, 3, 0.664);
-
   padding: 20px;
-
   background-color: rgba(18, 152, 170, 0.6);
-
   border-radius: 20px;
-
   margin: 25px;
-
-}
-
- 
-
- 
+} 
 
 #bienvenida button {
-
   text-align: center;
-
   padding: 10px 20px;
-
   background-color: rgb(197, 163, 12);
-
   color:rgb(15, 49, 141);
-
   border-radius: 50px;
-
- 
-
 }
-
- 
 
 #queEsLol .container {
-
   text-align: center;
-
   padding: 100px 12px;
-
 }
-
- 
-
- 
 
 #detallesLol {
-
   background-color: rgb(5, 48, 65);
-
   color: white;
-
   text-align: center;
-
   display: none;
-
- 
-
 }
-
- 
 
 #detallesLol .container {
-
   padding: 0px 60px;
-
- 
-
 }
-
- 
 
 #detallesLol h2 {
-
   margin-top: 0;
-
   font-size: 3.2em;
-
 }
-
- 
-
- 
 
 #detallesLol p {
-
   text-align: justify;
-
   padding: 25px;
-
 }
-
- 
 
 #detallesLol .carta {
-
   background-position: center center;
-
   background-size: cover;
-
   margin: 30px;
-
   border-radius: 15px;
-
   padding: 20px; 
-
   background-color: rgb(7, 84, 104);
-
   box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-
- 
-
 }
-
- 
 
 .carta :first-child{
-
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),;
-
 }
-
- 
 
 .carta :nth-child(2) {
-
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(img/fondoblanco.png);
-
- 
-
 }
-
- 
 
 #conoceLosCampeones {
-
   text-align: center;
-
   padding: 10px 20px;
-
   background-color: rgb(197, 163, 12);
-
   color:rgb(15, 49, 141);
-
   border-radius: 50px;
-
   margin-bottom: 40px;
-
 }
-
- 
 
 #campeones {
-
   background-color: rgb(24, 21, 21);
-
 }
 
- 
-
-/*Estilos cartas de campeones* PARTE2/
-
- 
-
-/*Ventana popup*/
-
- 
+/*Estilos cartas de campeones*/
 
 #container{
-
   display: flex;
-
   justify-content: space-evenly;
-
   flex-wrap: wrap;
-
   max-width: 90%;
-
   margin: auto; 
-
   margin-top: 7%;
-
   transition: 0.5;
-
- 
-
 }
 
- 
-
 .splash {
-
   width: 20em;
-
   height: 250px;
-
   border: solid 2px #eef1efb2;
-
   border-radius: 10%;
-
   object-fit: cover;
-
   box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
-
   padding: 5px;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: space-between;
-
   cursor: pointer;
-
 }
 
  
 
 .championsName{
-
   text-shadow: 0 0 2px #fff ;
-
   display: block;
-
   margin-block-start: -2.5em;
-
   margin-block-end: 0em;
-
   margin-inline-start: 0em;
-
   margin-inline-end: 0em;
-
   color:white;
-
   font-size:2em;
-
   font-family:Sahitya;
-
   align-self: center;
-
   padding: 1em 0em 1em 3.3em;
-
 }
-
- 
 
 textarea, select, input, button {
-
   outline: none;
-
 }
-
- 
 
 .hide{
-
   display: none;
-
 }
 
+/*Ventana popup*/
 
 .modal {
-
 position: fixed;
-
 z-index: 6;
-
 left: 0;
-
 top: 0;
-
 width: 100%;
-
 height: 100%;
-
 background-color: rgba(0, 0, 0, 0.6);
-
 }
-
- 
 
 .modalInfo {
-
 font-size: 15px;
-
 padding: 0em 1.5em 0em 1.5em;
-
 border-radius: 15;}
 
- 
-
 .modalContent {
-
   font-size: 25px;
-
   background: #020A11;
-
   display: flex;
-
   flex-direction: column;
-
   border-radius: 5px;
-
   width: 350px;
-
   height: 350px;
-
   text-align: center;
-
   color: #CEAA5B;
-
   font-family: 'Vollkorn SC', serif;
-
-  position: absolute;
-
-  top: 30%; 
-
+  /*position: absolute;*/
+  /*top: 30%; 
   right: 30%;
-
-  left: 10%;;
-
+  left: 10%;;*/
+  align-items: center;
+  justify-content: center;
   box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
-
- 
-
 }
-
- 
 
 .close{
-
   font-size: 30px;
-
   padding: 5px 310px;
-
   position: absolute;
-
   cursor: pointer;
-
- 
-
 }
 
- 
-
 .imgSplash{
-
   width: 100px;
-
   height: 100px;
-
   object-fit: cover;
-
   border: 1px solid #EAB95B; ;
-
 }
 
 .modalName{
-
   display: flex;
-
   flex-direction: row;
-
   font-family: 'Vollkorn SC', serif;
-
   font-weight: bold;
-
   font-size: 25px;
-
   color: #fff;
-
   margin: 1%;
-
   padding: 0.5em 0em 0em 0em;
-
 }
 
 .modalTitle{
-
   display: flex;
-
   flex-direction: column-reverse;
-
   font-family: 'Vollkorn SC', serif;
-
   font-size: 20px;
-
   color: #fff;
-
   margin: 1%;
-
 }
 
 .modalTags{
-
   font-family: 'Vollkorn SC', serif;
-
   font-size: 20px;
-
   color: #fff;
-
   margin: 1%;
-
 }
-
- 
 
 .stats{
-
   display: flex;
-
   margin-left: 10%;
-
   margin-right: 2%;
-
 }
-
- 
 
 /*footer*/
 
 footer {
-
   background-color: #0b4f7c;
-
   width: 100%;
-
   height: 20px;
-
   bottom: 0;
-
   position: fixed;
-
   text-align: center;
-
   color: white;
-
   display: flex;
-
   align-items: center;
-
   padding: 0px 50px;
-
 }
-
- 
-
- 
-
- 
 
 .nombreCampeon { 
-
   text-align: center;
-
   font-size: 25px;
-
   color: white;
-
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
-
- 
 
 /*Ocultar seccion campeones*/
 
 #campeones {
-
   display: none;
-
 }
-
- 
 
 /*Media queries para diseño Responsive*/
 
 @media (max-width: 858px){
 
-  .checkbtn {
-
+ .checkbtn {
     display: block;
-
   }
-
- 
 
   ul {
-
     position: fixed;
-
     width: 100%;
-
     height: 100vh;
-
     background: #0b3c53;
-
     top: 80px;
-
     left: 100%;
-
     text-align: center;
-
     transition: all 0.5s;   
-
   }
-
- 
 
   .menu1 ul li {
-
     display: block;
-
     margin: 50px 0px;
-
     line-height: 30px;
-
   }
-
- 
 
   .menu1 ul li a {
-
     font-size: 20px;
-
   }
-
- 
 
   li a:hover li a.active{
-
     background: none;
-
     color: red;
-
   }
-
- 
 
   #check:checked ~ ul {
-
     left: 0;
-
-  }
-
- 
-
- 
-
+  } 
 }
 
- 
+/*Estilos cartas de campeones*/
+
+/*Ventana popup*/
+.modal {
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modalInfo {
+  font-size: 15px;
+  padding: 0em 1.5em 0em 1.5em;
+  border-radius: 15;}
+
+  .modalContent {
+    font-size: 25px;
+    background: #020A11;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 410px;
+    height: 400px;
+    text-align: center;
+    color: #CEAA5B;
+    font-family: 'Vollkorn SC', serif;
+
+    /*position: absolute;
+    top: 30%; 
+    right: 30%;
+    left: 25%;;*/
+    align-items: center;
+    justify-content: center;
+    box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
+  }
 
 @media (min-width: 953px) {
 
- 
-
   .enlace {
-
     padding-left: 20px;   
-
   }
-
- 
 
   nav ul li a {
-
     font-size: 16px;
-
   }
 
- 
-
   #detallesLol .carta {
-
     padding: 20px; 
-
     background-color: rgb(7, 84, 104);
-
     box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-
     max-width: 70%;  
-
     margin: auto;
-
     margin-top: 10px;
-
   } 
-
- 
-
- 
-
 }

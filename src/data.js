@@ -1,6 +1,5 @@
 export const alphabetOrder = (firstLetter, condition) => {
-
-  const result = firstLetter;
+  const result = firstLetter; 
   if (condition == "a-z") {
     result.sort ((a, b) => {
       if (a.name > b.name) {
@@ -8,12 +7,11 @@ export const alphabetOrder = (firstLetter, condition) => {
       }
       return -1;
     });
-  }
-
+  } 
   if (condition === "z-a") {
     result.sort ((a, b) => {
-     if (a.name < b.name) {
-        return 1;   
+      if (a.name < b.name) {
+        return 1;    
       }
       return -1;
     });
@@ -35,3 +33,14 @@ export const roleFilter = (championsRol, choseFilter) => {
   });
   return byFilter;
 };
+
+
+
+
+
+
+
+
+
+
+
