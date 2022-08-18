@@ -19,9 +19,8 @@ body {
   background-color: white;
 }
 
-
 .container {
-  margin: auto;  
+  margin: auto; 
 }
 
 .menu1 {
@@ -61,7 +60,7 @@ body {
 
 li a.active, li a:hover {
   background: #136675;
-  transition: 0.5s;  
+  transition: 0.5s; 
 }
 
 .checkbtn {
@@ -78,7 +77,6 @@ li a.active, li a:hover {
   display: none;
 }
 
-
 #bienvenida {
   display: flex;
   align-items:center;
@@ -89,7 +87,6 @@ li a.active, li a:hover {
   background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(img/imageninicial.png);
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 .contBienvenida{
@@ -97,9 +94,8 @@ li a.active, li a:hover {
   padding: 20px;
   background-color: rgba(18, 152, 170, 0.6);
   border-radius: 20px;
-  margin: 25px; 
-}
-
+  margin: 25px;
+} 
 
 #bienvenida button {
   text-align: center;
@@ -107,7 +103,6 @@ li a.active, li a:hover {
   background-color: rgb(197, 163, 12);
   color:rgb(15, 49, 141);
   border-radius: 50px;
-  
 }
 
 #queEsLol .container {
@@ -115,25 +110,21 @@ li a.active, li a:hover {
   padding: 100px 12px;
 }
 
-
 #detallesLol {
   background-color: rgb(5, 48, 65);
   color: white;
   text-align: center;
   display: none;
-  
 }
 
 #detallesLol .container {
   padding: 0px 60px;
-  
 }
 
 #detallesLol h2 {
   margin-top: 0;
   font-size: 3.2em;
 }
-
 
 #detallesLol p {
   text-align: justify;
@@ -145,10 +136,9 @@ li a.active, li a:hover {
   background-size: cover;
   margin: 30px;
   border-radius: 15px;
-  padding: 20px;  
+  padding: 20px; 
   background-color: rgb(7, 84, 104);
   box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-  
 }
 
 .carta :first-child{
@@ -157,7 +147,6 @@ li a.active, li a:hover {
 
 .carta :nth-child(2) {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(img/fondoblanco.png);
-  
 }
 
 #conoceLosCampeones {
@@ -165,7 +154,7 @@ li a.active, li a:hover {
   padding: 10px 20px;
   background-color: rgb(197, 163, 12);
   color:rgb(15, 49, 141);
-  border-radius: 50px; 
+  border-radius: 50px;
   margin-bottom: 40px;
 }
 
@@ -175,16 +164,14 @@ li a.active, li a:hover {
 
 /*Estilos cartas de campeones*/
 
-
 #container{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 90%;
-  margin: auto;  
+  margin: auto; 
   margin-top: 7%;
   transition: 0.5;
-  
 }
 
 .splash {
@@ -201,6 +188,8 @@ li a.active, li a:hover {
   cursor: pointer;
 }
 
+ 
+
 .championsName{
   text-shadow: 0 0 2px #fff ;
   display: block;
@@ -213,17 +202,18 @@ li a.active, li a:hover {
   font-family:Sahitya;
   align-self: center;
   padding: 1em 0em 1em 3.3em;
-} 
+}
 
-textarea, select, input, button { 
+textarea, select, input, button {
   outline: none;
 }
 
 .hide{
   display: none;
 }
- 
+
 /*Ventana popup*/
+
 .modal {
 position: fixed;
 z-index: 6;
@@ -233,7 +223,7 @@ width: 100%;
 height: 100%;
 background-color: rgba(0, 0, 0, 0.6);
 }
-  
+
 .modalInfo {
 font-size: 15px;
 padding: 0em 1.5em 0em 1.5em;
@@ -251,13 +241,12 @@ border-radius: 15;}
   color: #CEAA5B;
   font-family: 'Vollkorn SC', serif;
   /*position: absolute;*/
-  /*top: 30%;  
+  /*top: 30%; 
   right: 30%;
   left: 10%;;*/
   align-items: center;
   justify-content: center;
   box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
-  
 }
 
 .close{
@@ -265,7 +254,6 @@ border-radius: 15;}
   padding: 5px 310px;
   position: absolute;
   cursor: pointer;
-  
 }
 
 .imgSplash{
@@ -274,6 +262,7 @@ border-radius: 15;}
   object-fit: cover;
   border: 1px solid #EAB95B; ;
 }
+
 .modalName{
   display: flex;
   flex-direction: row;
@@ -284,6 +273,7 @@ border-radius: 15;}
   margin: 1%;
   padding: 0.5em 0em 0em 0em;
 }
+
 .modalTitle{
   display: flex;
   flex-direction: column-reverse;
@@ -292,6 +282,7 @@ border-radius: 15;}
   color: #fff;
   margin: 1%;
 }
+
 .modalTags{
   font-family: 'Vollkorn SC', serif;
   font-size: 20px;
@@ -306,6 +297,7 @@ border-radius: 15;}
 }
 
 /*footer*/
+
 footer {
   background-color: #0b4f7c;
   width: 100%;
@@ -319,9 +311,7 @@ footer {
   padding: 0px 50px;
 }
 
-
-
-.nombreCampeon {  
+.nombreCampeon { 
   text-align: center;
   font-size: 25px;
   color: white;
@@ -329,13 +319,16 @@ footer {
 }
 
 /*Ocultar seccion campeones*/
+
 #campeones {
   display: none;
 }
 
 /*Media queries para diseño Responsive*/
+
 @media (max-width: 858px){
-  .checkbtn {
+
+ .checkbtn {
     display: block;
   }
 
@@ -347,7 +340,7 @@ footer {
     top: 80px;
     left: 100%;
     text-align: center;
-    transition: all 0.5s;    
+    transition: all 0.5s;   
   }
 
   .menu1 ul li {
@@ -367,10 +360,11 @@ footer {
 
   #check:checked ~ ul {
     left: 0;
-  }  
+  } 
 }
 
 /*Estilos cartas de campeones*/
+
 /*Ventana popup*/
 .modal {
   position: fixed;
@@ -381,12 +375,12 @@ footer {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   }
-    
+  
   .modalInfo {
   font-size: 15px;
   padding: 0em 1.5em 0em 1.5em;
   border-radius: 15;}
-  
+
   .modalContent {
     font-size: 25px;
     background: #020A11;
@@ -398,20 +392,20 @@ footer {
     text-align: center;
     color: #CEAA5B;
     font-family: 'Vollkorn SC', serif;
+
     /*position: absolute;
-    top: 30%;  
+    top: 30%; 
     right: 30%;
     left: 25%;;*/
     align-items: center;
     justify-content: center;
     box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
-    
   }
 
 @media (min-width: 953px) {
 
   .enlace {
-    padding-left: 20px;    
+    padding-left: 20px;   
   }
 
   nav ul li a {
@@ -419,23 +413,11 @@ footer {
   }
 
   #detallesLol .carta {
-    padding: 20px;  
+    padding: 20px; 
     background-color: rgb(7, 84, 104);
     box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-    max-width: 70%;   
+    max-width: 70%;  
     margin: auto;
     margin-top: 10px;
-  }  
-
-  
+  } 
 }
-
-
-
-
-
-
-
-
-
-

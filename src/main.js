@@ -67,7 +67,6 @@ document.getElementById("close").addEventListener("click", () => {
 //Mostrar y ocultar contenido página Bienvenida//
 let BotonConoceMas = document.getElementById("conoceMas");
 BotonConoceMas.addEventListener("click", mostrarConoceMas);
-
 function mostrarConoceMas() {
   document.getElementById("detallesLol").style.display = "block";
   document.getElementById("bienvenida").style.display = "none";
