@@ -173,9 +173,8 @@ li a.active, li a:hover {
   background-color: rgb(24, 21, 21);
 }
 
-/*Estilos cartas de campeones* PARTE2/
+/*Estilos cartas de campeones*/
 
-/*Ventana popup*/
 
 #container{
   display: flex;
@@ -224,6 +223,7 @@ textarea, select, input, button {
   display: none;
 }
  
+/*Ventana popup*/
 .modal {
 position: fixed;
 z-index: 6;
@@ -250,10 +250,12 @@ border-radius: 15;}
   text-align: center;
   color: #CEAA5B;
   font-family: 'Vollkorn SC', serif;
-  position: absolute;
-  top: 30%;  
+  /*position: absolute;*/
+  /*top: 30%;  
   right: 30%;
-  left: 10%;;
+  left: 10%;;*/
+  align-items: center;
+  justify-content: center;
   box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
   
 }
@@ -365,10 +367,46 @@ footer {
 
   #check:checked ~ ul {
     left: 0;
-  }
-
-  
+  }  
 }
+
+/*Estilos cartas de campeones*/
+/*Ventana popup*/
+.modal {
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  }
+    
+  .modalInfo {
+  font-size: 15px;
+  padding: 0em 1.5em 0em 1.5em;
+  border-radius: 15;}
+  
+  .modalContent {
+    font-size: 25px;
+    background: #020A11;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 410px;
+    height: 400px;
+    text-align: center;
+    color: #CEAA5B;
+    font-family: 'Vollkorn SC', serif;
+    /*position: absolute;
+    top: 30%;  
+    right: 30%;
+    left: 25%;;*/
+    align-items: center;
+    justify-content: center;
+    box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
+    
+  }
 
 @media (min-width: 953px) {
 

@@ -1,13 +1,14 @@
 /*console.log(lol.data.Aatrox.blurb);*/
 
 //Importacion información nombres campeones
-import copyLol from './data/lol/lol.js';
+import lol from './data/lol/lol.js';
+
 import {  
   alphabetOrder,
   roleFilter,
 } from './data.js';
 
- const dataLol = (copyLol.data);
+ const dataLol = (lol.data);
 
 
  //Declaramos las variables - Manipulación dinamica del DOM
