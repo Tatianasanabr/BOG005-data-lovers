@@ -83,18 +83,16 @@
   <section id="campeones">
 
     <nav class = "menu2">
-      <div class="buscador">
-        <input type="search" id="buscador" class="buscadorCampeon" placeholder="Busca por campeon" autocomplete="off">
-        <img src="img/search-regular-24.png" alt="buscar">
-
+      <div>
+        <input type="search" id="search" class="search" placeholder="🔍 Busca tu campeon"/>
       </div>
-      <button id="todosCampeones" class ="todosCampeones">TODOS</button>
-      <select name="opciones" id="ordenar" class ="ordenar">
-      <option value = "" selected disabled class="btn-ordenar">ORDENAR</option>
-      <option value = "ascendente" class="btn-AZ">A - Z</option>
-      <option value = "descendente" class="btn-ZA">Z - A</option>
-      </select>
-    </av>
+      <button id="todosCampeones" class ="todosCampeones">TODOS</button>      
+      <select id="buttonOrder">
+      <option value = "" disabled selected>ORDENAR</option>
+      <option value="a-z">A - Z</option>
+      <option value="z-a">Z - A</option>
+      </select>      
+    </nav>
   
 
  <!--Información pagina 3 visualizar todos los campeones--> 
