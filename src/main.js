@@ -4,6 +4,7 @@
 import lol from './data/lol/lol.js';
 
 import {  
+  namFilt,
   alphabetOrder,
   roleFilter,
 } from './data.js';
@@ -16,6 +17,7 @@ const viewChampions = document.getElementById("viewChampions");
 const container= document.getElementById("container");
 const myModal = document.getElementById("myModal");
 const text = document.getElementById("text");
+const search = document.getElementById("search");
 
 const data = Object.values(dataLol);
 const showData = (parametro) => {
@@ -83,3 +85,24 @@ function mostrarCampeones() {
   document.getElementById("queEsLol").style.display = "none";
   document.getElementById("detallesLol").style.display = "none";
 }
+
+//Boton ordenar en vista campeones A-Z - Z-A
+const buttonOrder = document.querySelector('#buttonOrder');
+buttonOrder.addEventListener('change', () => {
+  const valueOrder = buttonOrder.value;
+  container.innerHTML = '';
+  showData(alphabetOrder(data, valueOrder));
+});
+
+// Buscar
+const cleanContainer = () => {
+  container.innerHTML = '';
+  return false;
+};
+
+search.addEventListener('keyup', (event) => {
+  const term = event.target.value.toLowerCase();
+  const filterChampions = namFilt(data, term);
+  cleanContainer();
+  showData(filterChampions);
+});
