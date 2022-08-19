@@ -162,6 +162,25 @@ li a.active, li a:hover {
   background-color: rgb(24, 21, 21);
 }
 
+.menu2 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.todosCampeones {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgb(197, 163, 12);
+  color:rgb(15, 49, 141);
+  border: solid 2px #eef1efb2;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
 /*Estilos cartas de campeones*/
 
 #container{
@@ -222,37 +241,33 @@ top: 0;
 width: 100%;
 height: 100%;
 background-color: rgba(0, 0, 0, 0.6);
+align-items: center;
+justify-content: center;
+margin-top: 14%;
+margin-left: 5%;
 }
 
 .modalInfo {
 font-size: 15px;
-padding: 0em 1.5em 0em 1.5em;
-border-radius: 15;}
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .modalContent {
-  font-size: 25px;
   background: #020A11;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   width: 350px;
-  height: 350px;
-  text-align: center;
+  height: 390px;
   color: #CEAA5B;
-  font-family: 'Vollkorn SC', serif;
-  /*position: absolute;*/
-  /*top: 30%; 
-  right: 30%;
-  left: 10%;;*/
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
   box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
 }
 
 .close{
-  font-size: 30px;
-  padding: 5px 310px;
-  position: absolute;
+  font-size: 35px;  
+  margin-left: 80%;
   cursor: pointer;
 }
 
@@ -266,34 +281,35 @@ border-radius: 15;}
 .modalName{
   display: flex;
   flex-direction: row;
-  font-family: 'Vollkorn SC', serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
   font-size: 25px;
   color: #fff;
-  margin: 1%;
-  padding: 0.5em 0em 0em 0em;
+  padding: 0px 20px;
 }
 
 .modalTitle{
   display: flex;
   flex-direction: column-reverse;
-  font-family: 'Vollkorn SC', serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
   color: #fff;
-  margin: 1%;
+  margin-top: 10px;
 }
 
 .modalTags{
-  font-family: 'Vollkorn SC', serif;
   font-size: 20px;
   color: #fff;
   margin: 1%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .stats{
   display: flex;
   margin-left: 10%;
   margin-right: 2%;
+  margin-top: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /*footer*/
@@ -363,44 +379,7 @@ footer {
   } 
 }
 
-/*Estilos cartas de campeones*/
 
-/*Ventana popup*/
-.modal {
-  position: fixed;
-  z-index: 6;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  .modalInfo {
-  font-size: 15px;
-  padding: 0em 1.5em 0em 1.5em;
-  border-radius: 15;}
-
-  .modalContent {
-    font-size: 25px;
-    background: #020A11;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    width: 410px;
-    height: 400px;
-    text-align: center;
-    color: #CEAA5B;
-    font-family: 'Vollkorn SC', serif;
-
-    /*position: absolute;
-    top: 30%; 
-    right: 30%;
-    left: 25%;;*/
-    align-items: center;
-    justify-content: center;
-    box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
-  }
 
 @media (min-width: 953px) {
 
