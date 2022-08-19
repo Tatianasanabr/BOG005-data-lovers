@@ -61,7 +61,7 @@ container.addEventListener("click", (event) => {
   `;
 });
 
-// Evento cerar modal
+// Evento cerrar modal
 document.getElementById("close").addEventListener("click", () => {
   document.getElementById("myModal").classList.add("hide");
 });
