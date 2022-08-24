@@ -13,10 +13,8 @@ import {
 
 
  //Declaramos las variables - Manipulación dinamica del DOM
-const viewChampions = document.getElementById("viewChampions");
 const container= document.getElementById("container");
 const myModal = document.getElementById("myModal");
-const text = document.getElementById("text");
 const search = document.getElementById("search");
 
 const data = Object.values(dataLol);
@@ -35,6 +33,39 @@ container.innerHTML = show;
 };
 
 showData(data);
+
+
+//Mostrar y ocultar contenido página Bienvenida desde boton
+let BotonConoceMas = document.getElementById("conoceMas");
+BotonConoceMas.addEventListener("click", mostrarConoceMas);
+function mostrarConoceMas() {
+  document.getElementById("detallesLol").style.display = "block";
+  document.getElementById("bienvenida").style.display = "none";
+  document.getElementById("queEsLol").style.display = "none";
+}
+
+//Mostrar y ocultar contenido página Conoce más desde boton
+let BotonConoceCampeones = document.getElementById("conoceLosCampeones");
+BotonConoceCampeones.addEventListener("click", mostrarCampeones);
+
+function mostrarCampeones() {
+  document.getElementById("campeones").style.display = "block";
+  document.getElementById("bienvenida").style.display = "none";
+  document.getElementById("queEsLol").style.display = "none";
+  document.getElementById("detallesLol").style.display = "none"; 
+} 
+
+//Mostrar y ocultar contenido página Roles desde boton
+let botonCampeonesxRol = document.getElementById("buttonRoles");
+botonCampeonesxRol.addEventListener("click", campeonesxRol);
+
+function campeonesxRol() {
+  document.getElementById("campeonesxrol").style.display = "block";
+  document.getElementById("bienvenida").style.display = "none";
+  document.getElementById("queEsLol").style.display = "none";
+  document.getElementById("detallesLol").style.display = "none";
+  document.getElementById("campeones").style.display = "none";
+} 
 
 //modal historia
 container.addEventListener("click", (event) => {
@@ -66,25 +97,7 @@ document.getElementById("close").addEventListener("click", () => {
   document.getElementById("myModal").classList.add("hide");
 });
 
-//Mostrar y ocultar contenido página Bienvenida//
-let BotonConoceMas = document.getElementById("conoceMas");
-BotonConoceMas.addEventListener("click", mostrarConoceMas);
-function mostrarConoceMas() {
-  document.getElementById("detallesLol").style.display = "block";
-  document.getElementById("bienvenida").style.display = "none";
-  document.getElementById("queEsLol").style.display = "none";
-}
 
-//Mostrar y ocultar contenido página Conoce más//
-let BotonConoceCampeones = document.getElementById("conoceLosCampeones");
-BotonConoceCampeones.addEventListener("click", mostrarCampeones);
-
-function mostrarCampeones() {
-  document.getElementById("campeones").style.display = "block";
-  document.getElementById("bienvenida").style.display = "none";
-  document.getElementById("queEsLol").style.display = "none";
-  document.getElementById("detallesLol").style.display = "none";
-}
 
 //Boton ordenar en vista campeones A-Z - Z-A
 const buttonOrder = document.querySelector('#buttonOrder');
@@ -105,4 +118,62 @@ search.addEventListener('keyup', (event) => {
   const filterChampions = namFilt(data, term);
   cleanContainer();
   showData(filterChampions);
+});
+
+//Funcionalidad Nav Bar
+
+const ham = document.querySelector(".ham");
+const enlaces = document.querySelector(".menu1");
+const barras = document.querySelectorAll(".ham span");
+
+ham.addEventListener("click", () => {
+  enlaces.classList.toggle("activado");
+  barras.forEach(child => {child.classList.toggle("animado")});
+});
+
+
+// Cerrar menu
+/*const menu1Links =document.querySelectorAll('.menu1 a[href^="#');
+
+menu1Links.forEach(menu1Links => {
+  menu1Links.addEventListener("click", function(){
+    menu1Links.classList.remove("menu_abierto");
+  })
+});*/
+
+// Filtrar por Roles
+const assassin = document.getElementById('assassin');
+assassin.addEventListener('click', () => {
+  container.innerHTML = '';
+  showData(roleFilter(data, 'Assassin'));
+});
+
+const fighter = document.getElementById('fighter');
+fighter.addEventListener('click', () => {
+  container.innerHTML = '';
+  showData(roleFilter(data, 'Fighter'));
+});
+
+const mage = document.getElementById('mage');
+mage.addEventListener('click', () => {
+  container.innerHTML = '';
+  showData(roleFilter(data, 'Mage'));
+});
+
+const marksman = document.getElementById('marksman');
+marksman.addEventListener('click', () => {
+  container.innerHTML = '';
+  showData(roleFilter(data, 'Marksman'));
+});
+
+const support = document.getElementById('support');
+support.addEventListener('click', () => {
+  container.innerHTML = '';
+  showData(roleFilter(data, 'Support'));
+});
+
+const tank = document.getElementById('tank');
+tank.addEventListener('click', () => {
+  container.innerHTML = '';
+  showData(roleFilter(data, 'Tank'));
 });
