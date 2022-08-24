@@ -1,73 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8" />
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
     <title>Data Lovers - LOL</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/Logo.png" />
     <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
-
   </head>
 
   <body>
     <header>
-      <nav>
-        <a href="#">
-          <img class="logo" src="img/Logo.png" alt="logo">
-        </a>
-        <ul class="enlaces-menu">
-          <li><a href="#titulouno" title="Ir al titulo dos">INICIO</a></li>
-          <li><a href="#titulodos">CONOCE MÁS</a></li>
-          <li><a href="#titulo3">CAMPEONES</a></li>
-          <li><a href="#roles2">ROLES</a></li>
-          <li><a href="#estadistica3">ESTADÍSTICAS</a></li>
-        </ul>
-        <button class="ham" type="button">
-          <span class="br-1"></span>
-          <span class="br-2"></span>
-          <span class="br-3"></span>
-        </button>
-      </nav>
-    </header>
-<!--     <header class="topheader">
-    <nav class = "topnav">
-      <a href="#" class="logo">
-        <img src = "img/Logo.png" alt=""/>
-      </a>
-
-      <button class="abrir-menu" aria-label="Abrir menú">
-        <img height="4" width="4" src="img/hamburguer-icon.png" alt="abrir menú"/>
-      </button>
+    <nav>
+      
+        <img class="logo" src = "img/Logo.png" alt="logo"/>
+      
       <ul class="menu1">
-        <button class="cerrar-menu" aria-label="Cerrar menú">
-          <img src="img/close-icon.svg" alt="cerrar menú"/>
+        <li><a href="#bienvenida"><b>Inicio</b></a></li>
+        <li><a href="#detallesLol"><b>Conoce más</b></a></li>
+        <li><a href="#campeones"><b>Campeones</b></a></li>
+        <li><a href="#campeonesxrol"><b>Roles</b></a></li>
+        <li><a href="#"><b>Estadísticas</b></a></li>
+      </ul>
+      <button class="ham" type="button">
+        <span class="br-1"></span>
+        <span class="br-2"></span>
+        <span class="br-3"></span>
       </button>
-        <li><a href="#bienvenida" class="selected">Inicio</a></li>
-        <li><a href="#detallesLol">Conoce más</a></li>
-        <li><a href="#campeones">Campeones</a></li>
-        <li><a href="#">Roles</a></li>
-        <li><a href="#">Estadísticas</a></li>
-      </ul>
-      </nav>
-    </header> -->
-
-
-      <!-- <label for= "check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <a href="#" class="enlace">
-        <img src = "img/Logo.png" alt="" class="logo">
-      </a>
-      <ul>
-        <li><a href="#" class="nav-link">Inicio</a></li>
-        <li><a href="#" class="nav-link">Conoce más</a></li>
-        <li><a href="#" class="nav-link">Campeones</a></li>
-        <li><a href="#" class="nav-link">Roles</a></li>
-        <li><a href="#" class="nav-link">Estadísticas</a></li>
-      </ul>
-    </nav> -->    
+    </nav>
+  </header>
+    
 
 <!--Información pagina 1 página de Bienvenida y Curiosidades LOL-->
     <section id="bienvenida">
@@ -119,23 +81,19 @@
   </section>
   
 <!--Información pagina 3 "Conoce los campeones"-->
-  <section id="campeones">
-    <nav class = "menu2">
-      <h3>Campeones</h3><a name="titulotres"></a>
-      <div>
-      <br><input type="search" id="search" class="search" placeholder="🔍 BUSCA TU CAMPEÓN"/>     
-      <select id="buttonOrder">
-      <option value = "" disabled selected>🛡️ ORDENAR</option>
-      <option value="a-z">A - Z</option>
-      <option value="z-a">Z - A</option>
-      </select>   
-    </div>   
-    </nav>
-  
-
- <!--Información pagina 3 visualizar todos los campeones--> 
-
-   <main id="container"></main>
+  <section id="campeones">    
+      <div class="menu2">
+        <br><input type="search" id="search" class="search" placeholder="🔍 BUSCA TU CAMPEON"/>
+        <select id="buttonOrder">
+          <option value = "" disabled selected>🛡️ ORDENAR</option>
+          <option option value="a-z">A - Z</option>
+          <option value="z-a">Z - A</option>
+        </select>  
+        <button id="buttonRoles" class="estiloBoton">ROLES</button>
+      </div>    
+    
+<!--Información pagina 3 visualizar detalles de los campeones-->  
+  <main id="container"></main>
    <div id="myModal" class="modal hide">
     <div class="modalContent">
       <span class="close" id="close">&times;</span>
@@ -143,14 +101,19 @@
       </div>
       </div>
     </div>
+    </section>
+ <!--Información pagina 3 visualizar campeones por roles-->
+      <section id="campeonesxrol" class="campeonesxrol">
+        <div class="detalleCampeon"></div>  
+        <button id="assassin" title="Asesinos" type="submit"><img src="img/role-icon-assassin.png" class="buttonRol"><p class="nameRoles">ASESINOS</p></button>
+        <button id="fighter" title="Luchadores" type="submit"><img src="img/league-of-legends-fighter-icon-1.png" class="buttonRol"><p class="nameRoles">LUCHADORES</p></button>
+        <button id="mage" title="Magos" type="submit"><img src="img/Mage_icon.png" class="buttonRol"><p class="nameRoles">MAGOS</p></button>
+        <button id="marksman" title="Tiradores" type="submit"><img src="img/role_icon_marksman.png" class="buttonRol"><p class="nameRoles">TIRADORES</p></button>
+        <button id="support" title="Apoyos" type="submit"><img src="img/role_icon_support.png" class="buttonRol"><p class="nameRoles">APOYOS</p></button>
+        <button id="tank" title="Tanques" type="submit"><img src="img/Tanque.png" class="buttonRol"><p class="nameRoles">TANQUES</p></button>
+      </section>
+      <br>
 
-
- <!--Información pagina 3 visualizar los campeones por roles-->
-
-<section id="campeonesxrol" class="ocultar">
-  <div class="detalleCampeon" class="detalleCampeon"></div>
-</section>
-</section>
     <footer>
       <p>Tat&Sof Inc. All rights reserved ®</p>      
     </footer>

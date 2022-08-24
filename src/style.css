@@ -27,10 +27,14 @@ body {
   margin: auto; 
 }
 
+
 .logo {
-  width: 120px;
-  height: 25px;
-}
+  height: 50px;
+  width: 50px;
+  display:flex;
+  align-items: center;
+  font-size: 18px;
+  }
 
 nav {
   display: flex;
@@ -39,6 +43,9 @@ nav {
   min-height: 8vh;
   background-color: #294674;
 }
+
+
+/*Menú*/
 
 .ham {
   display: none;
@@ -58,92 +65,30 @@ nav {
   border-radius: 2px;
 }
 
-.enlaces-menu {
+.menu1 {
   display: flex;
   padding: 0;
 }
 
-.enlaces-menu li {
+.menu1 li {
   padding: 0 40px;
   list-style-type: none;
   transition: 0.3s;
 }
 
-.enlaces-menu li a {
+.menu1 li a {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #f3f3f3;
   font-weight:100;
+  text-transform: uppercase;
+  
 }
 
-.enlaces-menu li:hover {
+.menu1 li:hover {
   background-color: rgb(62, 130, 197);
 }
 
-/*DISPOSITIVOS MOVILES*/
-
-@media (max-width: 768px){
-  .logo {
-    padding-left: 25px;
-  }
-
-  .ham {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    transition: 0.2s 0.1s;
-  }
-
-  .ham:hover  {
-    transform: rotate(360deg);
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 25px 0;
-  }
-
-  .enlaces-menu {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 92vh;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: none;
-    opacity: 0;
-  }
-
-  .enlaces-menu li {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-  }
-}
-
-@keyframes muestraMenu {
-  from{opacity: 0;}
-  to{opacity: 1;}
-}
-.enlaces-menu.activado {
-  display: flex;
-  animation: muestraMenu 350ms ease-in-out both;
-}
-
-.br-1.animado {
-  transform: rotate(-45deg) translate(-10px, 8px);
-}
-
-.br-2.animado {
-  opacity: 0;
-}
-
-.br-3.animado{
-  transform: rotate(45deg) translate(-10px, -8px);
-}
 
 #bienvenida {
   display: flex;
@@ -154,8 +99,7 @@ nav {
   height: 75vh;
   background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(img/imageninicial.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 60px;
+  background-size: cover;  
 }
 
 .contBienvenida{
@@ -182,13 +126,12 @@ nav {
 #detallesLol {
   background-color: rgb(5, 48, 65);
   color: white;
-  text-align: center;
-  /*display: none;*/
+  text-align: center;  
 }
 
 #detallesLol .container {
   padding: 0px 60px;
-  margin-top: 100px;
+  margin-top:100px;
 }
 
 #detallesLol h2 {
@@ -234,11 +177,11 @@ nav {
 
 .menu2 {
   display: flex;
-  position: relative;
+  position: relative;  
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 
@@ -276,7 +219,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-}
+} 
 
 .championsName{
   text-shadow: 0 0 2px #fff ;
@@ -303,15 +246,15 @@ textarea, select, input, button {
 /*Ventana modal*/
 
 .modal {
-  position: fixed;
-  z-index: 3;
-  overflow: auto;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  }
+position: fixed;
+z-index: 3;
+overflow: auto;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+}
 
 
 .modalInfo {
@@ -331,9 +274,9 @@ textarea, select, input, button {
   border-radius: 5px;
   width: 350px;
   height: 390px;
-  text-align: center;
   color: #136675;
   position: absolute;
+  text-align: center;
   top: 2.1em;
   bottom: 4em;
   right: 3em;
@@ -349,11 +292,11 @@ textarea, select, input, button {
   cursor: pointer;
 }
 
-.imgSplash {
+.imgSplash{
   border-radius: 4px;
   width: 190px;
   height: 230px;
-  flex-direction: row;
+  flex-direction:row;
   float: left;
 }
 
@@ -378,7 +321,7 @@ textarea, select, input, button {
 
 .modalTags{
   font-size: 15px;
-  color: white;
+  color: #fff;
   margin: 1%;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -432,122 +375,95 @@ footer {
 
 /*Ocultar seccion campeones*/
 
-/*#campeones {
-  display: none;
-}*/
 
 .search {
-  width:20em;
-  height:3.5em;
-  border:none;
+  width: 20em;
+  height: 3.5em;
+  border: none;
+  color: #315d90;
   background-color: rgba(8, 8, 8, 0.5);
-  filter: alpha;
-  color:#315d90;
-  font-size:14px;
+  filter: alpha;  
+  font-size: 14px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 0em 1em 0em 1em;  
-  box-shadow:0 3px;
-  margin-left: 90px;
-  margin-right:0.5em; 
-  border-radius:0.2em;
+  padding: 0em 1em 0em 1em;
+  box-shadow: 0 3px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 0.2em;
   cursor: pointer;
   user-select: none;
 }
 
 #buttonOrder {
-  width:20em;
-  height:3.5em;
-  border:none;
+  width: 20em;
+  height: 3.5em;
+  border: none;
   color: #315d90;
   background-color: rgba(8, 8, 8, 0.5);
-  filter: alpha;
-  color:#315d90;
-  font-size:14px;
+  filter: alpha;  
+  font-size: 14px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 0em 2em 0em 2em;  
+  padding: 0em 2em 0em 2em;
   box-shadow: 0 3px;
-  margin-left: 30em;
-  margin-right:0.5em; 
-  border-radius:0.2em;
-  cursor: pointer;
-  user-select: none;
-}
-
-/*Media queries para diseño Responsive de celular*/
-
-@media (max-width: 768px){
-
-  .search {
-    width: 20em;
-    height: 4.0em;
-    border:none;
-    background-color: rgba(8, 8, 8, 0.5);
-    filter: alpha;
-    color:#315d90;
-    font-size:14px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 0em 1em 0em 1em;  
-    box-shadow: 0 3px;
-    margin-left: 30px;
-    margin-right: 0.5em; 
-    border-radius: 0.2em;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  #buttonOrder {
-  width:20em;
-  height:4.0em;
-  border:none;
-  filter: alpha;
-  padding: 0em 1em 0em 1em;  
-  box-shadow: 0 3px;
-  margin-left: 30px;
-  margin-right:0.5em; 
+  margin-left: 5em;
+  margin-right: 0.5em;
   border-radius: 0.2em;
   cursor: pointer;
   user-select: none;
-  }
-
-  .modal {
-    position: fixed;
-    /*z-index: 6;*/
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .modalContent {
-    font-size: 10px;
-    width: 300px;
-    /*height: 340px;*/
-    text-align: unset;
-    position: absolute;
-    top: 2.5em;
-    bottom: 4em;
-    right: 3em;
-    left: 0.5em;
-  }
-
-  .modalTitle {
-    color: #136675;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .info {
-    font-size: 12px;
-  }
-
-  .modalTags {
-    text-align: center;
-  }
 }
 
-/*Media queries para diseño Responsive de celular*/
 
-@media (min-width: 950px) {
+.campeonesxrol{
+  background-color: rgb(24, 21, 21);
+  
+}
+
+.estiloBoton {
+  width: 9em;
+  height: 4em;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(11, 57, 156, 0.5);
+  cursor: pointer;
+  margin-left: 2em;
+  margin-right: 0.5em;
+}
+
+.detalleCampeon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px; 
+    
+}
+
+.nameRoles {
+  padding: 0.3em;
+  font-family: serif;
+  text-align: center;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #807729;
+  border-radius: 1em;
+  margin: 0.5em;
+}
+
+.buttonRol{
+  background:rgb(50, 50, 51);
+  border: 4px solid rgba(235, 202, 18, 0.856);
+  border-radius: 60px;
+  width: 168px;
+  height: 167px;
+  box-shadow: 3px 10px 17px 3px rgba(0,0,0,0.75);
+  margin-bottom: 10px;  
+}
+  
+
+/*Media queries para diseño Responsive*/
+
+@media (max-width: 950px) {
 
   #detallesLol .carta {
     padding: 20px; 
@@ -556,64 +472,119 @@ footer {
     max-width: 70%;  
     margin: auto;
     margin-top: 10px;
-  }
+  } 
 
   /*Menú*/
 
+  .logo {
+      margin-left: 20px;  
+  }
+
+  .ham {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    transition: 0.2s 0.1s;
+  }
+
+  .ham:hover  {
+    transform: rotate(360deg);
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 0;
+  }
+
   .menu1 {
     flex-direction: column;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+    justify-content: space-around;
     align-items: center;
-    background-color: #0b4f7c;
-    height: 100%;
-    overflow-y: auto;
+    height: 92vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: none;
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
   }
 
   .menu1 li {
-    padding: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
   }
-
-  .menu1 a {
-    color: white;
-    line-height: 70px;
-    font-size: 25px;
-  }
-
-  .abrir-menu, .cerrar-menu {
-    display: block;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-
-  .cerrar-menu {
-    align-self: flex-end;
-    padding: 20px 15px;
-  }
-
-  .menu_abierto {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .abrir-menu:focus:not(:focus-visible),
-  .cerrar-menu:focus:not(:focus-visible) {
-    outline: none;
-  }
-
-  .menu1 a::after {
-    content: none;
-  }
-
-  .menu1 a:hover, 
-  .menu1 a.selected {
-    color: var(--secundary-color);
-  }
-
 }
+
+/*Animación icono ham*/
+@keyframes muestraMenu {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+.menu1.activado {
+  display: flex;
+  animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado {
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado {
+  opacity: 0;
+}
+
+.br-3.animado{
+  transform: rotate(45deg) translate(-10px, -8px);
+}
+
+
+/* Estilo opcion buscar*/
+
+  .search {
+    height: 4.0em;       
+    margin-left: 30px;    
+  }
+
+  #buttonOrder {
+    height:4.0em;
+    padding: 0em 1em 0em 1em;      
+    margin-left: 2em;    
+    margin-top: 10px;
+    }
+
+/* Estilo ventana modal*/
+
+  .modal {
+      position: fixed;
+      /*z-index: 6;*/
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  .modalContent {
+      font-size: 10px;
+      width: 300px;
+      /*height: 340px;*/
+      text-align: unset;
+      position: absolute;
+      top: 2.5em;
+    }  
+
+  .modalTitle {
+      color: #136675;
+      font-size: 20px;
+      text-align: center;
+    }
+  
+  .info {
+      font-size: 12px;
+    }
+  
+  .modalTags {
+      text-align: center;
+  } 
+
