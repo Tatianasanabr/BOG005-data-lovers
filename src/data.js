@@ -1,3 +1,5 @@
+//Función Ordenar
+
 export const alphabetOrder = (firstLetter, condition) => {
   const result = firstLetter; 
   if (condition == "a-z") {
@@ -19,7 +21,7 @@ export const alphabetOrder = (firstLetter, condition) => {
   return result;
 };
 
-//filter//
+//Función filtrar
 
 export const roleFilter = (championsRol, choseFilter) => {
   const byFilter = championsRol.filter((obj) => {
@@ -36,3 +38,6 @@ export const roleFilter = (championsRol, choseFilter) => {
 
 // Buscar
 export const namFilt = (data, term) => data.filter(({ name }) => name.toLowerCase().includes(term));
+
+
+

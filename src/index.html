@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8" />
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
     <title>Data Lovers - LOL</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/Logo.png" />
     <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
-
   </head>
 
   <body>
-
-    <nav class = "menu1">
-      <input type="checkbox" id="check">
-      <label for= "check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <a href="#" class="enlace">
-        <img src = "img/Logo.png" alt="" class="logo">
-      </a>
-      <ul>
-        <li><a href="#" class="nav-link">Inicio</a></li>
-        <li><a href="#" class="nav-link">Conoce más</a></li>
-        <li><a href="#" class="nav-link">Campeones</a></li>
-        <li><a href="#" class="nav-link">Roles</a></li>
-        <li><a href="#" class="nav-link">Estadísticas</a></li>
+    <header>
+    <nav>
+      
+        <img class="logo" src = "img/Logo.png" alt="logo"/>
+      
+      <ul class="menu1">
+        <li><a href="#bienvenida"><b>Inicio</b></a></li>
+        <li><a href="#detallesLol"><b>Conoce más</b></a></li>
+        <li><a href="#campeones"><b>Campeones</b></a></li>
+        <li><a href="#campeonesxrol"><b>Roles</b></a></li>
+        <li><a href="#"><b>Estadísticas</b></a></li>
       </ul>
-    </nav>    
+      <button class="ham" type="button">
+        <span class="br-1"></span>
+        <span class="br-2"></span>
+        <span class="br-3"></span>
+      </button>
+    </nav>
+  </header>
+    
 
 <!--Información pagina 1 página de Bienvenida y Curiosidades LOL-->
     <section id="bienvenida">
@@ -80,40 +81,19 @@
   </section>
   
 <!--Información pagina 3 "Conoce los campeones"-->
-  <section id="campeones">
-
-    <nav class = "menu2">
-      <div>
-        <input type="search" id="search" class="search" placeholder="🔍 Busca tu campeon"/>
-      </div>
-      <button id="todosCampeones" class ="todosCampeones">TODOS</button>      
-      <select id="buttonOrder">
-      <option value = "" disabled selected>ORDENAR</option>
-      <option value="a-z">A - Z</option>
-      <option value="z-a">Z - A</option>
-      </select>      
-    </nav>
-  
-
- <!--Información pagina 3 visualizar todos los campeones--> 
-
-<!--  <section div="verCampeones">  
-    <div id="cantidad" class="cantidadMostrada">
-    </div>
-    <section class="listado">
-      <div id="galeriaCampeones" class="galeriaCampeones"></div>      
-    </section>
-    <div id="error" class="ocultar">
-      <p>Resultado No encontrado</p>
-    </div>
-  </section>
-   <div class="subirLista">
-    <div class="botonSubir">
-      <img src="img/boton arriba.png" alt="subir">
-    </div>
-   </div> -->
-
-   <main id="container"></main>
+  <section id="campeones">    
+      <div class="menu2">
+        <br><input type="search" id="search" class="search" placeholder="🔍 BUSCA TU CAMPEON"/>
+        <select id="buttonOrder">
+          <option value = "" disabled selected>🛡️ ORDENAR</option>
+          <option option value="a-z">A - Z</option>
+          <option value="z-a">Z - A</option>
+        </select>  
+        <button id="buttonRoles" class="estiloBoton">ROLES</button>
+      </div>    
+    
+<!--Información pagina 3 visualizar detalles de los campeones-->  
+  <main id="container"></main>
    <div id="myModal" class="modal hide">
     <div class="modalContent">
       <span class="close" id="close">&times;</span>
@@ -121,39 +101,19 @@
       </div>
       </div>
     </div>
+    </section>
+ <!--Información pagina 3 visualizar campeones por roles-->
+      <section id="campeonesxrol" class="campeonesxrol">
+        <div class="detalleCampeon"></div>  
+        <button id="assassin" title="Asesinos" type="submit"><img src="img/role-icon-assassin.png" class="buttonRol"><p class="nameRoles">ASESINOS</p></button>
+        <button id="fighter" title="Luchadores" type="submit"><img src="img/league-of-legends-fighter-icon-1.png" class="buttonRol"><p class="nameRoles">LUCHADORES</p></button>
+        <button id="mage" title="Magos" type="submit"><img src="img/Mage_icon.png" class="buttonRol"><p class="nameRoles">MAGOS</p></button>
+        <button id="marksman" title="Tiradores" type="submit"><img src="img/role_icon_marksman.png" class="buttonRol"><p class="nameRoles">TIRADORES</p></button>
+        <button id="support" title="Apoyos" type="submit"><img src="img/role_icon_support.png" class="buttonRol"><p class="nameRoles">APOYOS</p></button>
+        <button id="tank" title="Tanques" type="submit"><img src="img/Tanque.png" class="buttonRol"><p class="nameRoles">TANQUES</p></button>
+      </section>
+      <br>
 
-
- <!--Información pagina 3 visualizar los roles-->
- 
- <!-- <section id="verRoles" class="ocultar">
-  <section id="seccionRoles" class="seccionRoles">
-    <div class="rol"><input type="image" id="asesinos" value ="asesinos" class="asesinos" src="img/role-icon-assassin.png"><p class="pRoles">ASESINOS</p></div>
-    <div class="rol"><input type="image" id="magos" value ="magos" class="magos" src="img/Mage_icon.png"><p class="pRoles">MAGOS</p></div>
-    <div class="rol"><input type="image" id="tiradores" value ="tiradores" class="tiradores" src="img/role_icon_marksman.png" class="pRoles">TIRADORES</p></div> 
-    <div class="rol"><input type="image" id="soporte" value ="soporte" class="soportet" src="img/role_icon_support.png"><p class="pRoles">SOPORTE</p></div>
-    <div class="rol"><input type="image" id="tanque" value ="tanque" class="tanque" src="img/Tanque.png"><p class="pRoles">TANQUE</p></div> 
-    <div class="rol"><input type="image" id="luchadores" value ="luchadores" class="luchadores" src="img/league-of-legends-fighter-icon-1.png"><p class="pRoles">LUCHADORES</p></div> 
-  </section>
- </section> -->
-
- <!--Información pagina 3 visualizar los campeones por roles-->
-
-<section id="campeonesxrol" class="ocultar">
-  <div class="detalleCampeon" class="detalleCampeon"></div>
-</section>
-
-<!--Información pagina 3 visualizar las estadisticas-->
-
-<!-- <section id="estadisticas" class="ocultar">
-  <div class="secEstaditicas">
-    <div class="divMapLo1">
-      <div id="hpChampion" class="hpchampions styleAverage"></div>
-      <div id="movespeedChampion" class="attackChampion styleAverage"></div>
-  </div>
-  <div class="divMapLo1"><img src= "img/fondo.png" class="mapLo1" alt="mapLo1"></div>
-</div>   
-</section> -->
-</section>
     <footer>
       <p>Tat&Sof Inc. All rights reserved ®</p>      
     </footer>
