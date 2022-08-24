@@ -12,10 +12,49 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <a href="#">
+          <img class="logo" src="img/Logo.png" alt="logo">
+        </a>
+        <ul class="enlaces-menu">
+          <li><a href="#titulouno" title="Ir al titulo dos">INICIO</a></li>
+          <li><a href="#titulodos">CONOCE MÁS</a></li>
+          <li><a href="#titulo3">CAMPEONES</a></li>
+          <li><a href="#roles2">ROLES</a></li>
+          <li><a href="#estadistica3">ESTADÍSTICAS</a></li>
+        </ul>
+        <button class="ham" type="button">
+          <span class="br-1"></span>
+          <span class="br-2"></span>
+          <span class="br-3"></span>
+        </button>
+      </nav>
+    </header>
+<!--     <header class="topheader">
+    <nav class = "topnav">
+      <a href="#" class="logo">
+        <img src = "img/Logo.png" alt=""/>
+      </a>
 
-    <nav class = "menu1">
-      <input type="checkbox" id="check">
-      <label for= "check" class="checkbtn">
+      <button class="abrir-menu" aria-label="Abrir menú">
+        <img height="4" width="4" src="img/hamburguer-icon.png" alt="abrir menú"/>
+      </button>
+      <ul class="menu1">
+        <button class="cerrar-menu" aria-label="Cerrar menú">
+          <img src="img/close-icon.svg" alt="cerrar menú"/>
+      </button>
+        <li><a href="#bienvenida" class="selected">Inicio</a></li>
+        <li><a href="#detallesLol">Conoce más</a></li>
+        <li><a href="#campeones">Campeones</a></li>
+        <li><a href="#">Roles</a></li>
+        <li><a href="#">Estadísticas</a></li>
+      </ul>
+      </nav>
+    </header> -->
+
+
+      <!-- <label for= "check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
       <a href="#" class="enlace">
@@ -28,13 +67,13 @@
         <li><a href="#" class="nav-link">Roles</a></li>
         <li><a href="#" class="nav-link">Estadísticas</a></li>
       </ul>
-    </nav>    
+    </nav> -->    
 
 <!--Información pagina 1 página de Bienvenida y Curiosidades LOL-->
     <section id="bienvenida">
       <div class="contBienvenida">
       <h3>¡Bienvenid@! <br> ¿Estás interesad@ en descubrir en que consiste uno de los juegos más populares del mundo gamer y hacer parte de los más de 
-        100 millones de usuarios activos? <br> Si estás list@, ¡Vamos a conocer más!.</h3>
+        100 millones de usuarios activos? <br> Si estás list@, ¡Vamos a conocer más!.</h3><a name="titulouno"></a>
       </div>
     <button id="conoceMas"><b>Conoce más</b></button>
     </section>
@@ -53,7 +92,7 @@
 <!--Información pagina 2 informacion LOL"Conoce más"-->
     <section id="detallesLol">
       <div class="container"></div>
-      <h2>¡Lo que debes saber!</h2>    
+      <h2>¡Lo que debes saber!</h2><a name="titulodos"></a>    
       <div class="carta">
         <h3>Objetivos de partida</h3>
         <p>Cada equipo cuenta con una base, donde hay un Nexo. El objetivo de la partida es defender tu Nexo y destruir el del rival. Para ello tenemos que ayudar a nuestras tropas a destruir la fortaleza enemiga. Las tres calles o líneas que unen ambos Nexos y por donde se mueven los esbirros cuentan con dos torres exteriores, una que protege la entrada y dos más que protegen el Nexo. En total cada equipo cuenta con 11 torres.</p>
@@ -81,37 +120,20 @@
   
 <!--Información pagina 3 "Conoce los campeones"-->
   <section id="campeones">
-
     <nav class = "menu2">
+      <h3>Campeones</h3><a name="titulotres"></a>
       <div>
-        <input type="search" id="search" class="search" placeholder="🔍 Busca tu campeon"/>
-      </div>
-      <button id="todosCampeones" class ="todosCampeones">TODOS</button>      
+      <br><input type="search" id="search" class="search" placeholder="🔍 BUSCA TU CAMPEÓN"/>     
       <select id="buttonOrder">
-      <option value = "" disabled selected>ORDENAR</option>
+      <option value = "" disabled selected>🛡️ ORDENAR</option>
       <option value="a-z">A - Z</option>
       <option value="z-a">Z - A</option>
-      </select>      
+      </select>   
+    </div>   
     </nav>
   
 
  <!--Información pagina 3 visualizar todos los campeones--> 
-
-<!--  <section div="verCampeones">  
-    <div id="cantidad" class="cantidadMostrada">
-    </div>
-    <section class="listado">
-      <div id="galeriaCampeones" class="galeriaCampeones"></div>      
-    </section>
-    <div id="error" class="ocultar">
-      <p>Resultado No encontrado</p>
-    </div>
-  </section>
-   <div class="subirLista">
-    <div class="botonSubir">
-      <img src="img/boton arriba.png" alt="subir">
-    </div>
-   </div> -->
 
    <main id="container"></main>
    <div id="myModal" class="modal hide">
@@ -123,36 +145,11 @@
     </div>
 
 
- <!--Información pagina 3 visualizar los roles-->
- 
- <!-- <section id="verRoles" class="ocultar">
-  <section id="seccionRoles" class="seccionRoles">
-    <div class="rol"><input type="image" id="asesinos" value ="asesinos" class="asesinos" src="img/role-icon-assassin.png"><p class="pRoles">ASESINOS</p></div>
-    <div class="rol"><input type="image" id="magos" value ="magos" class="magos" src="img/Mage_icon.png"><p class="pRoles">MAGOS</p></div>
-    <div class="rol"><input type="image" id="tiradores" value ="tiradores" class="tiradores" src="img/role_icon_marksman.png" class="pRoles">TIRADORES</p></div> 
-    <div class="rol"><input type="image" id="soporte" value ="soporte" class="soportet" src="img/role_icon_support.png"><p class="pRoles">SOPORTE</p></div>
-    <div class="rol"><input type="image" id="tanque" value ="tanque" class="tanque" src="img/Tanque.png"><p class="pRoles">TANQUE</p></div> 
-    <div class="rol"><input type="image" id="luchadores" value ="luchadores" class="luchadores" src="img/league-of-legends-fighter-icon-1.png"><p class="pRoles">LUCHADORES</p></div> 
-  </section>
- </section> -->
-
  <!--Información pagina 3 visualizar los campeones por roles-->
 
 <section id="campeonesxrol" class="ocultar">
   <div class="detalleCampeon" class="detalleCampeon"></div>
 </section>
-
-<!--Información pagina 3 visualizar las estadisticas-->
-
-<!-- <section id="estadisticas" class="ocultar">
-  <div class="secEstaditicas">
-    <div class="divMapLo1">
-      <div id="hpChampion" class="hpchampions styleAverage"></div>
-      <div id="movespeedChampion" class="attackChampion styleAverage"></div>
-  </div>
-  <div class="divMapLo1"><img src= "img/fondo.png" class="mapLo1" alt="mapLo1"></div>
-</div>   
-</section> -->
 </section>
     <footer>
       <p>Tat&Sof Inc. All rights reserved ®</p>      

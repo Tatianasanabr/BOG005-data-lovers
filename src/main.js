@@ -42,15 +42,14 @@ container.addEventListener("click", (event) => {
   const objCampeonSeleccionado = (dataLol[nombreSeleccionado]);
   myModal.classList.remove ("hide");
   myModal.querySelector("#modalInfo").innerHTML = `
-  <p class= "modalName">${objCampeonSeleccionado.name} </p>
   <p class="modalTitle">${objCampeonSeleccionado.title} </p>
-  <img src=${objCampeonSeleccionado.splash} class="imgSplash"/>
   <p class="modalTags"> Rol: ${objCampeonSeleccionado.tags} </p>
+  <br><img src=${objCampeonSeleccionado.splash} class="imgSplash"/>
   <div class="info">
-  <p> Defensa:${objCampeonSeleccionado.info.defense} </p>
-  <p> Ataque:${objCampeonSeleccionado.info.attack} </p>
-  <p> Magia:${objCampeonSeleccionado.info.magic} </p>
-  <p> Dificultad:${objCampeonSeleccionado.info.difficulty} </p>
+  <p> Dificultad: ${objCampeonSeleccionado.info.difficulty} </p>
+  <br><p> Defensa: ${objCampeonSeleccionado.info.defense} </p>
+  <br><p> Ataque: ${objCampeonSeleccionado.info.attack} </p>
+  <br><p> Magia: ${objCampeonSeleccionado.info.magic} </p>
   </div>
   <div class="stats">
   <p> Vida: ${objCampeonSeleccionado.stats.hp} </p>
@@ -105,4 +104,13 @@ search.addEventListener('keyup', (event) => {
   const filterChampions = namFilt(data, term);
   cleanContainer();
   showData(filterChampions);
+});
+
+const ham = document.querySelector(".ham");
+const enlaces = document.querySelector(".enlaces-menu");
+const barras = document.querySelectorAll(".ham span");
+
+ham.addEventListener("click", () => {
+  enlaces.classList.toggle("activado");
+  barras.forEach(child => {child.classList.toggle("animado")});
 });

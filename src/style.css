@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section [id]{
+  scroll-margin-top: 80px;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -23,58 +27,122 @@ body {
   margin: auto; 
 }
 
-.menu1 {
-  background-color: #0b4f7c;
-  height: 80px;
-  width: 100%;
-  cursor: pointer;
-}
-
-.enlace {
-  position: absolute;
-  padding: 20px 50px;
-}
-
 .logo {
-  height: 40px;
+  width: 120px;
+  height: 25px;
 }
 
-.menu1 ul {
-  float: right;
-  margin-right: 20px;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 8vh;
+  background-color: #294674;
 }
 
-.menu1  ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0px 5px;
-}
-
-.menu1  ul li a {
-  color: white;
-  font-size: 18px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
-li a.active, li a:hover {
-  background: #136675;
-  transition: 0.5s; 
-}
-
-.checkbtn {
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
+.ham {
+  display: none;
   cursor: pointer;
-  display: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
-#check {
-  display: none;
+.ham span {
+  display: block;
+  background-color: #f3f3f3;
+  height: 3px;
+  width: 28px;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.enlaces-menu {
+  display: flex;
+  padding: 0;
+}
+
+.enlaces-menu li {
+  padding: 0 40px;
+  list-style-type: none;
+  transition: 0.3s;
+}
+
+.enlaces-menu li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #f3f3f3;
+  font-weight:100;
+}
+
+.enlaces-menu li:hover {
+  background-color: rgb(62, 130, 197);
+}
+
+/*DISPOSITIVOS MOVILES*/
+
+@media (max-width: 768px){
+  .logo {
+    padding-left: 25px;
+  }
+
+  .ham {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    transition: 0.2s 0.1s;
+  }
+
+  .ham:hover  {
+    transform: rotate(360deg);
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 0;
+  }
+
+  .enlaces-menu {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 92vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: none;
+    opacity: 0;
+  }
+
+  .enlaces-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@keyframes muestraMenu {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+.enlaces-menu.activado {
+  display: flex;
+  animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado {
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado {
+  opacity: 0;
+}
+
+.br-3.animado{
+  transform: rotate(45deg) translate(-10px, -8px);
 }
 
 #bienvenida {
@@ -87,6 +155,7 @@ li a.active, li a:hover {
   background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(img/imageninicial.png);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 60px;
 }
 
 .contBienvenida{
@@ -114,11 +183,12 @@ li a.active, li a:hover {
   background-color: rgb(5, 48, 65);
   color: white;
   text-align: center;
-  display: none;
+  /*display: none;*/
 }
 
 #detallesLol .container {
   padding: 0px 60px;
+  margin-top: 100px;
 }
 
 #detallesLol h2 {
@@ -168,6 +238,7 @@ li a.active, li a:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-top: 80px;
 }
 
 
@@ -207,8 +278,6 @@ li a.active, li a:hover {
   cursor: pointer;
 }
 
- 
-
 .championsName{
   text-shadow: 0 0 2px #fff ;
   display: block;
@@ -231,51 +300,61 @@ textarea, select, input, button {
   display: none;
 }
 
-/*Ventana popup*/
+/*Ventana modal*/
 
 .modal {
-position: fixed;
-z-index: 6;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.6);
-align-items: center;
-justify-content: center;
-margin-top: 14%;
-margin-left: 5%;
-}
+  position: fixed;
+  z-index: 3;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  }
+
 
 .modalInfo {
-font-size: 15px;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+  border-radius: 0.1em;
+  margin: 0.2em;
+  margin-top: -2em;
+  padding: 0.5em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
+  }
 
 .modalContent {
+  font-size: 26px;
   background: #020A11;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   width: 350px;
   height: 390px;
-  color: #CEAA5B;
   text-align: center;
+  color: #136675;
+  position: absolute;
+  top: 2.1em;
+  bottom: 4em;
+  right: 3em;
+  left: 18em;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
   box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
+  margin-top: 80px;
 }
 
 .close{
   font-size: 35px;  
-  margin-left: 80%;
+  margin-left: 90%;
   cursor: pointer;
 }
 
-.imgSplash{
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border: 1px solid #EAB95B; ;
+.imgSplash {
+  border-radius: 4px;
+  width: 190px;
+  height: 230px;
+  flex-direction: row;
+  float: left;
 }
 
 .modalName{
@@ -283,7 +362,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   flex-direction: row;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 10px;
   color: #fff;
   padding: 0px 20px;
 }
@@ -298,11 +377,12 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 }
 
 .modalTags{
-  font-size: 20px;
-  color: #fff;
+  font-size: 15px;
+  color: white;
   margin: 1%;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 .stats{
   display: flex;
@@ -310,6 +390,22 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   margin-right: 2%;
   margin-top: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: absolute;
+  top: 340px;
+  font-size: 14px;
+  color: #136675;
+}
+
+.info {
+  margin-left: 10%;
+  margin-right: 2%;
+  margin-top: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: absolute;
+  top: 129px;
+  font-size: 19px;
+  color: white;
+  right: 15px;
 }
 
 /*footer*/
@@ -336,61 +432,122 @@ footer {
 
 /*Ocultar seccion campeones*/
 
-#campeones {
+/*#campeones {
   display: none;
+}*/
+
+.search {
+  width:20em;
+  height:3.5em;
+  border:none;
+  background-color: rgba(8, 8, 8, 0.5);
+  filter: alpha;
+  color:#315d90;
+  font-size:14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0em 1em 0em 1em;  
+  box-shadow:0 3px;
+  margin-left: 90px;
+  margin-right:0.5em; 
+  border-radius:0.2em;
+  cursor: pointer;
+  user-select: none;
 }
 
+#buttonOrder {
+  width:20em;
+  height:3.5em;
+  border:none;
+  color: #315d90;
+  background-color: rgba(8, 8, 8, 0.5);
+  filter: alpha;
+  color:#315d90;
+  font-size:14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0em 2em 0em 2em;  
+  box-shadow: 0 3px;
+  margin-left: 30em;
+  margin-right:0.5em; 
+  border-radius:0.2em;
+  cursor: pointer;
+  user-select: none;
+}
 
-/*Media queries para diseño Responsive*/
+/*Media queries para diseño Responsive de celular*/
 
-@media (max-width: 858px){
+@media (max-width: 768px){
 
- .checkbtn {
-    display: block;
+  .search {
+    width: 20em;
+    height: 4.0em;
+    border:none;
+    background-color: rgba(8, 8, 8, 0.5);
+    filter: alpha;
+    color:#315d90;
+    font-size:14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0em 1em 0em 1em;  
+    box-shadow: 0 3px;
+    margin-left: 30px;
+    margin-right: 0.5em; 
+    border-radius: 0.2em;
+    cursor: pointer;
+    user-select: none;
   }
 
-  ul {
+  #buttonOrder {
+  width:20em;
+  height:4.0em;
+  border:none;
+  filter: alpha;
+  padding: 0em 1em 0em 1em;  
+  box-shadow: 0 3px;
+  margin-left: 30px;
+  margin-right:0.5em; 
+  border-radius: 0.2em;
+  cursor: pointer;
+  user-select: none;
+  }
+
+  .modal {
     position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #0b3c53;
-    top: 80px;
-    left: 100%;
-    text-align: center;
-    transition: all 0.5s;   
-  }
-
-  .menu1 ul li {
-    display: block;
-    margin: 50px 0px;
-    line-height: 30px;
-  }
-
-  .menu1 ul li a {
-    font-size: 20px;
-  }
-
-  li a:hover li a.active{
-    background: none;
-    color: red;
-  }
-
-  #check:checked ~ ul {
+    /*z-index: 6;*/
     left: 0;
-  } 
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modalContent {
+    font-size: 10px;
+    width: 300px;
+    /*height: 340px;*/
+    text-align: unset;
+    position: absolute;
+    top: 2.5em;
+    bottom: 4em;
+    right: 3em;
+    left: 0.5em;
+  }
+
+  .modalTitle {
+    color: #136675;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+
+  .modalTags {
+    text-align: center;
+  }
 }
 
+/*Media queries para diseño Responsive de celular*/
 
-
-@media (min-width: 953px) {
-
-  .enlace {
-    padding-left: 20px;   
-  }
-
-  nav ul li a {
-    font-size: 16px;
-  }
+@media (min-width: 950px) {
 
   #detallesLol .carta {
     padding: 20px; 
@@ -399,5 +556,64 @@ footer {
     max-width: 70%;  
     margin: auto;
     margin-top: 10px;
-  } 
+  }
+
+  /*Menú*/
+
+  .menu1 {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: #0b4f7c;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .menu1 li {
+    padding: 0;
+  }
+
+  .menu1 a {
+    color: white;
+    line-height: 70px;
+    font-size: 25px;
+  }
+
+  .abrir-menu, .cerrar-menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .cerrar-menu {
+    align-self: flex-end;
+    padding: 20px 15px;
+  }
+
+  .menu_abierto {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .abrir-menu:focus:not(:focus-visible),
+  .cerrar-menu:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .menu1 a::after {
+    content: none;
+  }
+
+  .menu1 a:hover, 
+  .menu1 a.selected {
+    color: var(--secundary-color);
+  }
+
 }
