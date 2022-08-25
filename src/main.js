@@ -58,13 +58,8 @@ function mostrarCampeones() {
 //Mostrar y ocultar contenido página Roles desde boton
 let botonCampeonesxRol = document.getElementById("buttonRoles");
 botonCampeonesxRol.addEventListener("click", campeonesxRol);
-
 function campeonesxRol() {
-  document.getElementById("campeonesxrol").style.display = "block";
-  document.getElementById("bienvenida").style.display = "none";
-  document.getElementById("queEsLol").style.display = "none";
-  document.getElementById("detallesLol").style.display = "none";
-  document.getElementById("campeones").style.display = "none";
+  document.getElementById("campeonesxrol").style.display = "block";  
 } 
 
 //modal historia
@@ -177,3 +172,10 @@ tank.addEventListener('click', () => {
   container.innerHTML = '';
   showData(roleFilter(data, 'Tank'));
 });
+
+/*const listRole = document.querySelector('#buttonRoles');
+listRole.addEventListener('change', () => {
+  const valueRole = buttonRoles.value;     
+  container.innerHTML = '';
+  showData(roleFilter(data, valueRole));
+});*/
