@@ -7,9 +7,11 @@ import {
   namFilt,
   alphabetOrder,
   roleFilter,
+  calculoStats,
 } from './data.js';
 
  const dataLol = (lol.data);
+ const arrayCampeones = Object.values(dataLol);
 
 
  //Declaramos las variables - Manipulación dinamica del DOM
@@ -59,8 +61,8 @@ function mostrarCampeones() {
 let botonCampeonesxRol = document.getElementById("buttonRoles");
 botonCampeonesxRol.addEventListener("click", campeonesxRol);
 function campeonesxRol() {
-  document.getElementById("campeonesxrol").style.display = "block";  
-} 
+  document.getElementById("campeonesxrol").style.display = "block";
+}
 
 //modal historia
 container.addEventListener("click", (event) => {
@@ -68,15 +70,14 @@ container.addEventListener("click", (event) => {
   const objCampeonSeleccionado = (dataLol[nombreSeleccionado]);
   myModal.classList.remove ("hide");
   myModal.querySelector("#modalInfo").innerHTML = `
-  <p class= "modalName">${objCampeonSeleccionado.name} </p>
   <p class="modalTitle">${objCampeonSeleccionado.title} </p>
-  <img src=${objCampeonSeleccionado.splash} class="imgSplash"/>
   <p class="modalTags"> Rol: ${objCampeonSeleccionado.tags} </p>
+  <br><img src=${objCampeonSeleccionado.splash} class="imgSplash"/>
   <div class="info">
-  <p> Defensa:${objCampeonSeleccionado.info.defense} </p>
-  <p> Ataque:${objCampeonSeleccionado.info.attack} </p>
-  <p> Magia:${objCampeonSeleccionado.info.magic} </p>
-  <p> Dificultad:${objCampeonSeleccionado.info.difficulty} </p>
+  <p> Dificultad: ${objCampeonSeleccionado.info.difficulty} </p>
+  <br><p> Defensa: ${objCampeonSeleccionado.info.defense} </p>
+  <br><p> Ataque: ${objCampeonSeleccionado.info.attack} </p>
+  <br><p> Magia: ${objCampeonSeleccionado.info.magic} </p>
   </div>
   <div class="stats">
   <p> Vida: ${objCampeonSeleccionado.stats.hp} </p>
@@ -173,9 +174,14 @@ tank.addEventListener('click', () => {
   showData(roleFilter(data, 'Tank'));
 });
 
-/*const listRole = document.querySelector('#buttonRoles');
-listRole.addEventListener('change', () => {
-  const valueRole = buttonRoles.value;     
-  container.innerHTML = '';
-  showData(roleFilter(data, valueRole));
-});*/
+
+
+
+
+
+const attackChampion = document.querySelector("#attackChampion");
+attackChampion.innerHTML = ` Daño de ataque promedio: "${calculoStats(arrayCampeones, "attackdamage")}"`;
+const spellBlock = document.querySelector("#spellBlock");
+spellBlock.innerHTML = ` Bloque de Hechizos: "${calculoStats(arrayCampeones, "spellblock")}`;
+const attackspeedperlevel = document.querySelector("#attackspeedperlevel");
+attackspeedperlevel.innerHTML = ` Velolcidad de ataque por nivel: "${calculoStats(arrayCampeones, "attackspeedperlevel")}`;

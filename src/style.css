@@ -31,7 +31,7 @@ body {
 
 .logo {
   height: 50px;
-  width: 50px;
+  width: 170px;
   display:flex;
   align-items: center;
   font-size: 18px;
@@ -230,10 +230,11 @@ nav {
   box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
   padding: 5px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-} 
+}
 
 .championsName{
   text-shadow: 0 0 2px #fff ;
@@ -257,10 +258,12 @@ textarea, select, input, button {
   display: none;
 }
 
-/*Ventana popup*/
+/*Ventana modal*/
 
 .modal {
 position: fixed;
+align-items: center;
+justify-content: center;
 z-index: 3;
 overflow: auto;
 left: 0;
@@ -270,14 +273,15 @@ height: 100%;
 background-color: rgba(0, 0, 0, 0.6);
 }
 
+
 .modalInfo {
-border-radius: 0.1em;
-margin: 0.2em;
-margin-top: -2em;
-padding: 0.5em;
-font-size: 14px;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+  border-radius: 0.1em;
+  margin: 0.2em;
+  margin-top: -2em;
+  padding: 0.5em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
+  }
 
 .modalContent {
   font-size: 26px;
@@ -307,8 +311,9 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
 .imgSplash{
   border-radius: 4px;
-  width: 190px;
-  height: 230px;
+  width: 150px;
+  height: 180px;
+  margin-left: 10px;
   flex-direction:row;
   float: left;
 }
@@ -318,7 +323,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   flex-direction: row;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 10px;
   color: #fff;
   padding: 0px 20px;
 }
@@ -339,11 +344,11 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 .stats{
   display: flex;
   margin-left: 10%;
   margin-right: 2%;
-  margin-top: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   position: absolute;
   top: 340px;
@@ -406,7 +411,13 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   user-select: none;
 }
 
-/*Roles*/
+.campeonesxrol{  
+  display: none;   
+  justify-content: space-between;  
+  margin-top: 40px; 
+  margin-left: 20px;
+  padding: 0px 150px;
+}
 
 .estiloBoton {
   width: 9em;
@@ -432,6 +443,9 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   width: 70%;
 }
 
+.campeonesxrol img{
+  width: 70%;
+}
 
 .buttonRol{
   background:rgb(50, 50, 51);
@@ -440,26 +454,132 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   width: 150px;
   height: 150px;
   box-shadow: 3px 10px 17px 3px rgba(0,0,0,0.75);
-  margin-bottom: 10px; 
+  margin-bottom: 10px;  
   cursor: pointer;
   color:rgb(187, 161, 14);  
   text-align: center;  
-  font-size:18px; 
+  font-size:18px;
 }
 
-/*footer*/
+/*Sección Estadísticas*/
 
-footer {
-  background-color: #0b4f7c;
+.estadisticas {
   width: 100%;
-  height: 20px;
-  bottom: 0;
-  position: fixed;
-  text-align: center;
-  color: white;
+  height: 120%;
+  margin: 0px auto;
   display: flex;
+  justify-content: center;
+  background-color: rgb(24, 21, 21);
+  margin-bottom: 40px;
+}
+
+.sectionAvage {
+  margin: 10px;
+  -webkit-perspective: 800;
+  perspective: 800;
+}
+
+.divMapLol {
+  width: 300px;
+  height: 350px;
+  background: #0b4f7c;
+  border-radius: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: .7s ease;
+  box-shadow: 2px 2px 10px rgba(175, 174, 192, 0.8);
+}
+
+.adelante, .attackChampion {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.adelante {
+  width: 100%;
+}
+
+.attackChampion {
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0px 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.sectionAvage:hover .divMapLol{
+  transform: rotateY(180deg);
+}
+
+.card1 {
+  background-image: url(img/ataque.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.adelante, .spellBlock {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.spellBlock {
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.adelante, .crit {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card2 {
+  background-image: url(img/card2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.crit {
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card3 {
+  background-image: url(img/card3.png);
+  background-size: cover;
+  background-position: center;
 }
   
 
@@ -518,49 +638,37 @@ footer {
     padding: 20px;
   }
 
-  .menu2 {        
-    justify-content:center;
+  .estadisticas {
+    flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 50px;     
+  
   }
+}
 
-  /* Estilo opciones buscar, ordenar y boton roles*/
+/*Animación icono ham*/
+@keyframes muestraMenu {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+.menu1.activado {
+  display: flex;
+  animation: muestraMenu 350ms ease-in-out both;
+}
 
-  .search {
-    height: 4.0em;       
-    margin-left: 30px;    
-  }
+.br-1.animado {
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
 
-  #buttonOrder {
-    height:4.0em;
-    padding: 0em 1em 0em 1em;      
-    margin-left: 2em;    
-    margin-top: 10px;
-    }
+.br-2.animado {
+  opacity: 0;
+}
 
-    .estiloBoton {      
-      margin-left: 100px;      
-      margin-top: 50px; 
-    }
+.br-3.animado{
+  transform: rotate(45deg) translate(-10px, -8px);
+}
 
-    #campeones p{     
-      margin-top: 60px;
-      margin-left: 25px;     
-      max-width:90%; 
-      font-size: 14px; 
-    }
 
-    .campeonesxrol{  
-      display: none;       
-      margin-left: 80px ;
-      padding: 0px 20px;  
-        
-    }    
-
-    .campeonesxrol img{
-      width: 50%;
-    }
+/* Estilo opcion buscar*/
 
     .buttonRol{      
       width: 110px;
@@ -606,35 +714,4 @@ footer {
   .modalTags {
       text-align: center;
   } 
-
-}
-
-/*Animación icono ham*/
-@keyframes muestraMenu {
-  from{opacity: 0;}
-  to{opacity: 1;}
-}
-.menu1.activado {
-  display: flex;
-  animation: muestraMenu 350ms ease-in-out both;
-}
-
-.br-1.animado {
-  transform: rotate(-45deg) translate(-10px, 8px);
-}
-
-.br-2.animado {
-  opacity: 0;
-}
-
-.br-3.animado{
-  transform: rotate(45deg) translate(-10px, -8px);
-}
-
-
-
-
-  
-
-  
 

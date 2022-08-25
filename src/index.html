@@ -13,13 +13,13 @@
     <header>
     <nav>
       
-        <img class="logo" src = "img/Logo.png" alt="logo"/>
+        <img class="logo" src = "img/tyslogo-PhotoRoom.png" alt="logo"/>
       
       <ul class="menu1">
         <li><a href="#bienvenida"><b>Inicio</b></a></li>
         <li><a href="#detallesLol"><b>Conoce más</b></a></li>
-        <li><a href="#campeones"><b>Campeones</b></a></li>        
-        <li><a href="#"><b>Estadísticas</b></a></li>
+        <li><a href="#campeones"><b>Campeones</b></a></li>
+        <li><a href="#estadisticas"><b>Estadísticas</b></a></li>
       </ul>
       <button class="ham" type="button">
         <span class="br-1"></span>
@@ -34,7 +34,7 @@
     <section id="bienvenida">
       <div class="contBienvenida">
       <h3>¡Bienvenid@! <br> ¿Estás interesad@ en descubrir en que consiste uno de los juegos más populares del mundo gamer y hacer parte de los más de 
-        100 millones de usuarios activos? <br> Si estás list@, ¡Vamos a conocer más!.</h3>
+        100 millones de usuarios activos? <br> Si estás list@, ¡Vamos a conocer más!.</h3><a name="titulouno"></a>
       </div>
     <button id="conoceMas"><b>Conoce más</b></button>
     </section>
@@ -53,7 +53,7 @@
 <!--Información pagina 2 informacion LOL"Conoce más"-->
     <section id="detallesLol">
       <div class="container"></div>
-      <h2>¡Lo que debes saber!</h2>    
+      <h2>¡Lo que debes saber!</h2><a name="titulodos"></a>    
       <div class="carta">
         <h3>Objetivos de partida</h3>
         <p>Cada equipo cuenta con una base, donde hay un Nexo. El objetivo de la partida es defender tu Nexo y destruir el del rival. Para ello tenemos que ayudar a nuestras tropas a destruir la fortaleza enemiga. Las tres calles o líneas que unen ambos Nexos y por donde se mueven los esbirros cuentan con dos torres exteriores, una que protege la entrada y dos más que protegen el Nexo. En total cada equipo cuenta con 11 torres.</p>
@@ -87,21 +87,20 @@
           <option value = "" disabled selected>🛡️ ORDENAR</option>
           <option value="a-z">A - Z</option>
           <option value="z-a">Z - A</option>
-        </select> 
-        <button id="buttonRoles" class="estiloBoton">Roles</button>        
+        </select>  
+        <button id="buttonRoles" class="estiloBoton">ROLES</button>
       </div>  
-      <!-- <p><b>¡Para más información haz click sobre el campeon de tu interés!</b></p> -->
-
-<!--Información pagina 3 visualizar campeones por roles-->
-    <section id="campeonesxrol" class="campeonesxrol">
+      
+ <!--Información pagina 3 visualizar campeones por roles-->
+      <section id="campeonesxrol" class="campeonesxrol">
         <div class="detalleCampeon"></div>  
-          <button type="submit" id="assassin" class="buttonRol"><img src="img/role-icon-assassin.png">ASESINOS</button>
-          <button type="submit" id="fighter" class="buttonRol"><img src="img/league-of-legends-fighter-icon-1.png">LUCHADORES</button>
-          <button type="submit" id="mage" class="buttonRol"><img src="img/Mage_icon.png">MAGOS</button>
-          <button type="submit" id="marksman" class="buttonRol"><img src="img/role_icon_marksman.png">TIRADORES</button>
-          <button type="submit" id="support" class="buttonRol"><img src="img/role_icon_support.png">APOYOS</button>
-          <button type="submit" id="tank" class="buttonRol"><img src="img/Tanque.png">TANQUES</button>
-    </section>     
+        <button type="submit" id="assassin" class="buttonRol"><img src="img/role-icon-assassin.png">ASESINOS</button>
+        <button type="submit" id="fighter" class="buttonRol"><img src="img/league-of-legends-fighter-icon-1.png">LUCHADORES</button>
+        <button type="submit" id="mage" class="buttonRol"><img src="img/Mage_icon.png">MAGOS</button>
+        <button type="submit" id="marksman" class="buttonRol"><img src="img/role_icon_marksman.png">TIRADORES</button>
+        <button type="submit"id="support" class="buttonRol"><img src="img/role_icon_support.png">APOYOS</button>
+        <button type="submit" id="tank" class="buttonRol"><img src="img/Tanque.png">TANQUES</button>
+      </section>
     
 <!--Información pagina 3 visualizar detalles de los campeones-->  
   <main id="container"></main>
@@ -112,7 +111,28 @@
       </div>
       </div>
     </div>
-    </section>      
+  </section>
+
+      <section id="estadisticas" class="estadisticas">
+        <div class="sectionAvage">
+          <div class="divMapLol">
+            <div class="adelante card1"></div>
+            <div id="attackChampion" class="attackChampion styleAverage"></div>
+          </div>
+        </div>
+        <div class="sectionAvage">
+          <div class="divMapLol">
+            <div class="adelante card2"></div>
+            <div id="spellBlock" class="spellBlock styleAverage"></div>
+          </div>
+        </div>
+        <div class="sectionAvage">
+          <div class="divMapLol">
+            <div class="adelante card3"></div>
+            <div id="attackspeedperlevel" class="spellBlock styleAverage"></div>
+          </div>
+        </div>
+      </section>
 
     <footer>
       <p>Tat&Sof Inc. All rights reserved ®</p>      
