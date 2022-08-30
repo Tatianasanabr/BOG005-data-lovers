@@ -1,64 +1,64 @@
 //Función Ordenar
 
-export const alphabetOrder = (firstLetter, condition) => {
-  const result = firstLetter; 
-  if (condition == "a-z") {
-    result.sort ((a, b) => {
+export const ordenAlfabetico = (primeraLetra, direccionOrden) => {
+  const resultado = primeraLetra; 
+  if (direccionOrden === "a-z") { //ascendente
+    resultado.sort ((a, b) => {
       if (a.name > b.name) {
         return 1;
       }
-      return -1;
+        return -1;
     });
   } 
-  if (condition === "z-a") {
-    result.sort ((a, b) => {
+  if (direccionOrden  === "z-a") {  //descendente
+    resultado.sort ((a, b) => {
       if (a.name < b.name) {
         return 1;    
       }
-      return -1;
+        return -1;
     });
   }
-  return result;
+  return resultado;
 };
 
 //Función filtrar
 
-export const roleFilter = (championsRol, choseFilter) => {
-  const byFilter = championsRol.filter((obj) => {
-    let filterResult = "";
-    for (let i =0; i < obj.tags.length; i += 1) {
-      if (obj.tags [i] === choseFilter) {
-        filterResult += obj.tags[i];
+export const rolFiltrado = (rolCampeones, filtroEscogido) => {
+  const campeonesFiltrados = rolCampeones.filter((obj) => {
+    let resultadoFiltro = "";
+    for (let i =0; i < obj.tags.length; i ++) {
+      if (obj.tags [i] === filtroEscogido) {
+        resultadoFiltro += obj.tags[i];
       }
     }
-    return filterResult;
+    return resultadoFiltro;
   });
-  return byFilter;
+  return campeonesFiltrados;
 };
 
 // Buscar
-export const namFilt = (data, term) => data.filter(({ name }) => name.toLowerCase().includes(term));
+export const buscarNombre = (data, palabrasDigitadas) => data.filter(({ name }) => name.toLowerCase().includes(palabrasDigitadas));
 
 //Estadistica - cálculo
-export const calculoStats = (data, entrada) => {
-  let item = 0;
-  let result = 0;
-  switch (entrada) {
+export const calculoEstadistico = (data, caracteristicas) => {
+  let elementos = "";
+  let resultado = "";
+  switch (caracteristicas) {
     case 'attackdamage':
-      item = data.map((campeones) => campeones.stats);
-      result = (item.reduce((sum, value) => (sum + value.attackdamage), 0) / 134).toFixed(2);
+      elementos = data.map((campeones) => campeones.stats);
+      resultado = (elementos.reduce((acumulador, valorActual) => (acumulador+ valorActual.attackdamage), 0) / 134).toFixed(2);
       break;
     case 'spellblock':
-      item = data.map((campeones) => campeones.stats);
-      result = (item.reduce((sum, value) => (sum + value.spellblock), 0) / 134).toFixed(2);
+      elementos = data.map((campeones) => campeones.stats);
+      resultado = (elementos.reduce((acumulador, valorActual) => (acumulador + valorActual.spellblock), 0) / 134).toFixed(2);
       break;
     case 'attackspeedperlevel':
-      item = data.map((campeones) => campeones.stats);
-      result = (item.reduce((sum, value) => (sum + value.attackspeedperlevel), 0) / 134).toFixed(2);
+      elementos = data.map((campeones) => campeones.stats);
+      resultado = (elementos.reduce((acumulador, valorActual) => (acumulador + valorActual.attackspeedperlevel), 0) / 134).toFixed(2);
       break;
     default:
       break;
   }
-  return result; 
+  return resultado; 
 };
 

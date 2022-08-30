@@ -11,10 +11,8 @@
 
   <body>
     <header>
-    <nav>
-      
-        <img class="logo" src = "img/tyslogo-PhotoRoom.png" alt="logo"/>
-      
+      <nav>      
+        <img class="logo" src = "img/tyslogo-PhotoRoom.png" alt="logo"/>      
       <ul class="menu1">
         <li><a href="#bienvenida"><b>Inicio</b></a></li>
         <li><a href="#detallesLol"><b>Conoce más</b></a></li>
@@ -45,7 +43,7 @@
       <div class="texto">
         <h2>¿Qué es LOL?</h2>
         <br>
-        <P>League of Legends es un juego de estrategia por equipos en el que dos equipos conformados por cinco poderosos campeones se enfrentan para destruir la base del otro. Elige de entre más de 140 campeones para realizar jugadas épicas, asegurar asesinatos y destruir torretas mientras avanzas hacia la victoria.</P>        
+        <p>League of Legends es un juego de estrategia por equipos en el que dos equipos conformados por cinco poderosos campeones se enfrentan para destruir la base del otro. Elige de entre más de 130 campeones para realizar jugadas épicas, asegurar asesinatos y destruir torretas mientras avanzas hacia la victoria.</p>        
       </div>
     </div>
     </section>
@@ -73,8 +71,7 @@
       <div class="carta">
         <h3>Posiciones</h3>
         <p>A medida que vas subiendo de nivel las posiciones de League of Legends son básicas si queremos ganar una partida. Los jugadores se reparten de la siguiente forma: uno a la calle superior (toplaner), uno a la calle central (midlaner), dos a la calle inferior (AD Carry y support) y el quinto a la jungla (jungla). Cada posición tiene muy definidos el tipo de campeones.</p>
-      </div>
-    </div>
+      </div>    
     <br>
     <button id="conoceLosCampeones"><b>Conoce los Campeones</b></button>
   </section>
@@ -84,13 +81,15 @@
       <div class="menu2">
         <br><input type="search" id="search" class="search" placeholder="🔍 BUSCA TU CAMPEON"/>
         <select id="buttonOrder">
-          <option value = "" disabled selected>🛡️ ORDENAR</option>
-          <option option value="a-z">A - Z</option>
+          <option value= "" disabled selected>🛡️ ORDENAR</option>
+          <option value="a-z">A - Z</option>
           <option value="z-a">Z - A</option>
         </select>  
         <button id="buttonRoles" class="estiloBoton">ROLES</button>
-      </div>  
-      
+      </div>
+      <div class="instruccion1">
+        <p>¡Para más información haz clic sobre el campeon de tu interes!</p>  
+      </div>
  <!--Información pagina 3 visualizar campeones por roles-->
       <section id="campeonesxrol" class="campeonesxrol">
         <div class="detalleCampeon"></div>  
@@ -98,22 +97,23 @@
         <button type="submit" id="fighter" class="buttonRol"><img src="img/league-of-legends-fighter-icon-1.png">LUCHADORES</button>
         <button type="submit" id="mage" class="buttonRol"><img src="img/Mage_icon.png">MAGOS</button>
         <button type="submit" id="marksman" class="buttonRol"><img src="img/role_icon_marksman.png">TIRADORES</button>
-        <button type="submit"id="support" class="buttonRol"><img src="img/role_icon_support.png">APOYOS</button>
+        <button type="submit" id="support" class="buttonRol"><img src="img/role_icon_support.png">APOYOS</button>
         <button type="submit" id="tank" class="buttonRol"><img src="img/Tanque.png">TANQUES</button>
       </section>
     
 <!--Información pagina 3 visualizar detalles de los campeones-->  
-  <main id="container"></main>
-   <div id="myModal" class="modal hide">
-    <div class="modalContent">
+    <main id="container"></main>
+      <div id="myModal" class="modal hide">
+      <div class="modalContent">
       <span class="close" id="close">&times;</span>
       <div class="modalInfo" id="modalInfo">
       </div>
       </div>
-    </div>
+      </div>
   </section>
-
-      <section id="estadisticas" class="estadisticas">
+    <h4>Las estadísticas que todo jugador debe conocer</h4>
+    <h6>Explora con tu cursor</h6>
+  <section id="estadisticas" class="estadisticas">
         <div class="sectionAvage">
           <div class="divMapLol">
             <div class="adelante card1"></div>
@@ -132,10 +132,10 @@
             <div id="attackspeedperlevel" class="spellBlock styleAverage"></div>
           </div>
         </div>
-      </section>
+  </section>
 
     <footer>
-      <p>Tat&Sof Inc. All rights reserved ®</p>      
+      <p>Tat&Sof Inc. All rights reserved </p>      
     </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
