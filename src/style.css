@@ -11,7 +11,7 @@ html {
 }
 
 section [id]{
-  scroll-margin-top: 80px;
+  scroll-margin-top: 8vh;
 }
 
 body {
@@ -22,6 +22,7 @@ body {
   min-height: 100%;
   background-color: white;
 }
+
 
 .container {
   margin: auto; 
@@ -37,11 +38,13 @@ body {
   }
 
 nav {
-  display: flex;
+  display: flex;  
   align-items: center;
   justify-content: space-around;
   min-height: 8vh;
   background-color: #294674;
+  position: fixed;
+  width: 100%;
 }
 
 
@@ -89,7 +92,7 @@ nav {
   background-color: rgb(62, 130, 197);
 }
 
-
+/*Pagina inicial*/
 #bienvenida {
   display: flex;
   align-items:center;
@@ -100,6 +103,7 @@ nav {
   background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(img/imageninicial.png);
   background-repeat: no-repeat;
   background-size: cover;  
+  margin-top: 70px;
 }
 
 .contBienvenida{
@@ -123,10 +127,11 @@ nav {
   padding: 100px 12px;
 }
 
+/*Segunda pagina*/
 #detallesLol {
   background-color: rgb(5, 48, 65);
   color: white;
-  text-align: center;  
+  text-align: center;    
 }
 
 #detallesLol .container {
@@ -152,6 +157,8 @@ nav {
   padding: 20px; 
   background-color: rgb(7, 84, 104);
   box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+  max-width: 80%;
+  margin-left: 140px;
 }
 
 .carta :first-child{
@@ -171,31 +178,117 @@ nav {
   margin-bottom: 40px;
 }
 
+/*Tercera página*/
+
 #campeones {
   background-color: rgb(24, 21, 21);
 }
 
 .menu2 {
-  display: flex;
-  position: relative;  
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex;  
+  flex-direction:row;
+  justify-content: space-evenly;
   align-items: center;
+  margin-top: 80px;
+  
+}
+
+.search {
+  display: flex;
+  width: 20em;
+  height: 3.5em;
+  border: none;
+  color: #315d90;
+  background-color: rgba(8, 8, 8, 0.5);
+  filter: alpha;  
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0em 1em 0em 1em;
+  box-shadow: 0 3px;  
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 0.2em;
+  cursor: pointer;
+  user-select: none;  
+}
+
+#buttonOrder {
+  display: flex;
+  width: 20em;
+  height: 3.5em;
+  border: none;
+  color: #315d90;
+  background-color: rgba(8, 8, 8, 0.5);
+  filter: alpha;  
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0em 2em 0em 2em;
+  box-shadow: 0 3px;
+  margin-left: 2em;
+  margin-right: 0.5em;
+  border-radius: 0.2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.estiloBoton {
+  width: 9em;
+  height: 4em;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(11, 57, 156, 0.5);
+  cursor: pointer;
+  margin-left: 2em;
+  margin-right: 0.5em;
+}
+
+.instruccion1{
+  color: white;
+  padding: 10px;
+  background-color: rgba(100, 186, 226, 0.3);
+  border-radius: 10px;
+  margin: 20px 50px;
+  text-align: center;
   margin-top: 60px;
 }
 
-
-.todosCampeones {
-  text-align: center;
-  padding: 10px 20px;
-  background-color: rgb(197, 163, 12);
-  color:rgb(15, 49, 141);
-  border: solid 2px #eef1efb2;
-  border-radius: 5px;
-  margin-bottom: 40px;
+.campeonesxrol{  
+  display: none;    
+  justify-content: space-between;  
+  margin-top: 40px; 
+  margin-left: 20px;
+  padding: 0px 45px;
 }
 
-/*Estilos cartas de campeones*/
+.campeonesxrol img{
+  width: 60%;
+}
+
+.detalleCampeon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px; 
+    
+}
+
+.buttonRol{
+  background:rgb(50, 50, 51);
+  border: 4px solid rgba(235, 202, 18, 0.856);
+  border-radius: 20px;
+  width: 140px;
+  height: 130px;
+  box-shadow: 3px 10px 17px 3px rgba(0,0,0,0.75);
+  margin-bottom: 10px;  
+  cursor: pointer;
+  color:rgb(187, 161, 14);  
+  text-align: center;  
+  font-size:18px;
+}
+
+/*Tercera página - Estilos cartas de campeones*/
 
 #container{
   display: flex;
@@ -244,7 +337,7 @@ textarea, select, input, button {
   display: none;
 }
 
-/*Ventana modal*/
+/*Tercera página - Ventana modal*/
 
 .modal {
 position: fixed;
@@ -275,7 +368,7 @@ background-color: rgba(0, 0, 0, 0.6);
   flex-direction: column;
   border-radius: 5px;
   width: 350px;
-  height: 390px;
+  height: 400px;
   color: #136675;
   position: absolute;
   text-align: center;
@@ -285,12 +378,14 @@ background-color: rgba(0, 0, 0, 0.6);
   left: 18em;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
   box-shadow:  0px 10px 10px 0px rgba(90,116,148,0.3);
-  margin-top: 80px;
+  margin-top: 200px;
+  margin-left: -180px;
 }
 
 .close{
-  font-size: 35px;  
-  margin-left: 90%;
+  font-size: 40px;  
+  margin-left: 280px;  
+  text-align: center;
   cursor: pointer;
 }
 
@@ -319,7 +414,7 @@ background-color: rgba(0, 0, 0, 0.6);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
   color: #fff;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .modalTags{
@@ -328,7 +423,6 @@ background-color: rgba(0, 0, 0, 0.6);
   margin: 1%;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 
 .stats{
   display: flex;
@@ -353,121 +447,13 @@ background-color: rgba(0, 0, 0, 0.6);
   right: 15px;
 }
 
-/*footer*/
-
-footer {
-  background-color: #0b4f7c;
-  width: 100%;
-  height: 20px;
-  bottom: 0;
-  position: fixed;
-  text-align: center;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 0px 50px;
-}
-
-.nombreCampeon { 
-  text-align: center;
-  font-size: 25px;
-  color: white;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-/*Ocultar seccion campeones*/
-
-
-.search {
-  width: 20em;
-  height: 3.5em;
-  border: none;
-  color: #315d90;
-  background-color: rgba(8, 8, 8, 0.5);
-  filter: alpha;  
-  font-size: 14px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 0em 1em 0em 1em;
-  box-shadow: 0 3px;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  border-radius: 0.2em;
-  cursor: pointer;
-  user-select: none;
-}
-
-#buttonOrder {
-  width: 20em;
-  height: 3.5em;
-  border: none;
-  color: #315d90;
-  background-color: rgba(8, 8, 8, 0.5);
-  filter: alpha;  
-  font-size: 14px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 0em 2em 0em 2em;
-  box-shadow: 0 3px;
-  margin-left: 5em;
-  margin-right: 0.5em;
-  border-radius: 0.2em;
-  cursor: pointer;
-  user-select: none;
-}
-
-.campeonesxrol{  
-  display: none;   
-  justify-content: space-between;  
-  margin-top: 40px; 
-  margin-left: 20px;
-  padding: 0px 150px;
-}
-
-.estiloBoton {
-  width: 9em;
-  height: 4em;
-  border-radius: 10px;
-  color: white;
-  background-color: rgba(11, 57, 156, 0.5);
-  cursor: pointer;
-  margin-left: 2em;
-  margin-right: 0.5em;
-}
-
-.detalleCampeon{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;  
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px; 
-    
-}
-
-.campeonesxrol img{
-  width: 70%;
-}
-
-.buttonRol{
-  background:rgb(50, 50, 51);
-  border: 4px solid rgba(235, 202, 18, 0.856);
-  border-radius: 20px;
-  width: 150px;
-  height: 150px;
-  box-shadow: 3px 10px 17px 3px rgba(0,0,0,0.75);
-  margin-bottom: 10px;  
-  cursor: pointer;
-  color:rgb(187, 161, 14);  
-  text-align: center;  
-  font-size:18px;
-}
-
 /*Sección Estadísticas*/
 
 .estadisticas {
   width: 100%;
   height: 120%;
   margin: 0px auto;
-  display: flex;
+  display: flex;  
   justify-content: center;
   background-color: rgb(24, 21, 21);
   margin-bottom: 40px;
@@ -584,7 +570,7 @@ footer {
 
 h4 {
   text-align: center;
-  font-size: 40px;
+  font-size: 40px;  
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
   background-color: black;
   color: #dff9fb;
@@ -593,17 +579,77 @@ h4 {
 
 h6 {
   text-align: center;
-  font-size: 17px;
+  font-size: 17px;  
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
   background-color: black;
   color: #c7ecee;
 }
-  
 
-/*Media queries para diseño Responsive*/
+/*footer*/
+
+footer {
+  background-color: #0b4f7c;
+  width: 100%;
+  height: 20px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
+}
+  
+/*--------------------------------------------------------------------*/
+
+/*Media querie para diseño Responsive*/
 
 @media (max-width: 950px) {
 
+/*Menú*/
+
+   .logo {
+    margin-left: 20px;  
+}
+
+  .ham {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  transition: 0.2s 0.1s;
+}
+
+  .ham:hover  {
+  transform: rotate(360deg);
+}
+
+  nav {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+  .menu1 {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: none;
+  opacity: 0;
+  background-color: rgb(85, 95, 99);
+}
+
+  .menu1 li {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}  
+
+/*Segunda página*/
   #detallesLol .carta {
     padding: 20px; 
     background-color: rgb(7, 84, 104);
@@ -613,54 +659,95 @@ h6 {
     margin-top: 10px;
   } 
 
-  /*Menú*/
-
-  .logo {
-      margin-left: 20px;  
+ 
+  /* Tercera página - Estilo menu2*/
+  .menu2 {     
+    flex-direction:column;     
   }
 
-  .ham {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    transition: 0.2s 0.1s;
+  .search {
+    height: 4.0em;       
+    margin-left: 20px;     
   }
 
-  .ham:hover  {
-    transform: rotate(360deg);
-  }
+  #buttonOrder {
+    height:4.0em;
+    padding: 0em 1em 0em 1em;      
+    margin-left: 2em;    
+    margin-top: 20px;
+    }
 
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 25px 0;
-  }
+  .estiloBoton {
+    margin-top: 20px;
+    }  
 
-  .menu1 {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 92vh;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: none;
-    opacity: 0;
-  }
+/* Tercera página - Estilo ventana modal*/
+  .modal {
+      position: fixed;
+      z-index: 6;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-  .menu1 li {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-  }
+  .modalContent {
+      font-size: 10px;
+      width: 300px;
+      height: 400px;
+      text-align: unset;
+      position: absolute;        
+      margin-left: -140px;
+    }  
 
-  .estadisticas {
-    flex-direction: column;
-    align-items: center;
+  .modalTitle {
+      color: #136675;
+      font-size: 20px;
+      text-align: center;
+    }
   
+  .info {
+      font-size: 12px;
+    }
+  
+  .modalTags {
+      text-align: center;
+  } 
+
+  .close{     
+    margin-left: 250px;
+  }  
+
+  /* Tercera página - Estilo campeones por Rol*/
+  .campeonesxrol{      
+    margin: 40px;
+    padding: 0px;
+    margin-left: 50px;
+  }
+
+  .buttonRol{      
+    width: 90px;
+    height: 90px;      
+    margin-bottom: 10px;        
+    font-size:10px;
+  }
+
+  /*Estadisticas*/
+  .estadisticas {       
+    flex-direction: column;
+    align-items: center;     
+  }
+
+  h4 {    
+    font-size: 20px;     
+  }
+  
+  h6 {    
+    font-size: 14px;     
   }
 }
+
+/*----------------------------------------------------------------------------*/
 
 /*Animación icono ham*/
 @keyframes muestraMenu {
@@ -685,51 +772,4 @@ h6 {
 }
 
 
-/* Estilo opcion buscar*/
-
-  .search {
-    height: 4.0em;       
-    margin-left: 30px;    
-  }
-
-  #buttonOrder {
-    height:4.0em;
-    padding: 0em 1em 0em 1em;      
-    margin-left: 2em;    
-    margin-top: 10px;
-    }
-
-/* Estilo ventana modal*/
-
-  .modal {
-      position: fixed;
-      /*z-index: 6;*/
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-  .modalContent {
-      font-size: 10px;
-      width: 300px;
-      /*height: 340px;*/
-      text-align: unset;
-      position: absolute;
-      top: 2.5em;
-    }  
-
-  .modalTitle {
-      color: #136675;
-      font-size: 20px;
-      text-align: center;
-    }
-  
-  .info {
-      font-size: 12px;
-    }
-  
-  .modalTags {
-      text-align: center;
-  } 
 

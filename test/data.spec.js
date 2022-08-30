@@ -1,9 +1,10 @@
 import {  
-  namFilt,
-  alphabetOrder,
-  roleFilter,
+  buscarNombre,
+  ordenAlfabetico,
+  rolFiltrado,
 } from '../src/data.js';
 
+//Definición variables
 const dataTest = [
   {
     name: 'Ahri',
@@ -28,8 +29,8 @@ const dataTest = [
 ];
  
 
-
-const dataName = [
+//variables para test ordenar
+const infoNombre = [
   {
     name: 'Ahri',
   },
@@ -47,7 +48,7 @@ const dataName = [
   },
 ];
 
-const orderAscent = [
+const ordenAscent = [
   {
     name: 'Ahri',
   },
@@ -65,7 +66,7 @@ const orderAscent = [
   },
 ];
 
-const orderDescent = [
+const ordenDescent = [
   {
     name: 'Zac',
   },
@@ -83,7 +84,8 @@ const orderDescent = [
   },
 ];
 
-const filterMage = [
+//Variable para test filtrar
+const filtroMago = [
   {
     name: 'Ahri',
     tags: ['Mage', 'Assassin'],
@@ -94,49 +96,53 @@ const filterMage = [
   },
 ];
 
-const searchChamp = [
+//Variable para test buscar
+const buscarCampeon = [
   {
     name: 'Ahri',
   },
   {
     name: 'Akali',
   },
-];
+]; 
 
-describe('alphabetOrder', () => {
-  it('is a function', () => {
-    expect(typeof alphabetOrder).toBe('function');
+//Definición test 
+//Ordenar
+describe('ordenAlfabetico', () => {
+  it('es auna funcion', () => {
+    expect(typeof ordenAlfabetico).toBe('function');
   });
 
-  it('return sort champions from a-z', () => {
-    expect(alphabetOrder(dataName, 'a-z')).toEqual(orderAscent);
+  it('retornar campeon ordenado de a-z', () => {
+    expect(ordenAlfabetico(infoNombre , 'a-z')).toEqual(ordenAscent);
   });
 
-  it('return sort champions from z-a', () => {
-    expect(alphabetOrder(dataName, 'z-a')).toEqual(orderDescent);
+  it('retornar campeon ordenado de z-a', () => {
+    expect(ordenAlfabetico(infoNombre , 'z-a')).toEqual(ordenDescent);
   });
 });
 
-describe('roleFilter', () => {
-  it('is a function', () => {
-    expect(typeof roleFilter).toBe('function');
+//Filtrar
+describe('rolFiltrado', () => {
+  it('es una funcion', () => {
+    expect(typeof rolFiltrado).toBe('function');
   });
 
-  it('return champion filter by role', () => {
-    expect(roleFilter(dataTest, 'Mage')).toEqual(filterMage);
+  it('retornar el campeon filtrado por rol', () => {
+    expect(rolFiltrado(dataTest, 'Mage')).toEqual(filtroMago );
   });
   
 });
 
-
-describe('namFilt', () => {
-  it('is a function', () => {
-    expect(typeof namFilt).toBe('function');
+//Buscar
+describe('buscarNombre', () => {
+  it('es una función', () => {
+    expect(typeof buscarNombre).toBe('function');
   });
-  it('return champion filter by first letter A', () => {
-    expect(namFilt(dataName, 'name', 'A')).toEqual(searchChamp);
+  it('devolver el filtro de campeón por la primera letra A', () => {
+    expect(buscarNombre(infoNombre , 'name', 'A')).toEqual(buscarCampeon);
   });
-});
+}); 
 
 /*describe('example', () => {
   it('is a function', () => {
