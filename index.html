@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+    <title>Data Lovers - LOL</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/Logo.png" />
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>      
+        <img class="logo" src = "img/tyslogo-PhotoRoom.png" alt="logo"/>      
+      <ul class="menu1">
+        <li><a href="#bienvenida"><b>Inicio</b></a></li>
+        <li><a href="#detallesLol"><b>Conoce más</b></a></li>
+        <li><a href="#campeones"><b>Campeones</b></a></li>
+        <li><a href="#estadisticas"><b>Estadísticas</b></a></li>
+      </ul>
+      <button class="ham" type="button">
+        <span class="br-1"></span>
+        <span class="br-2"></span>
+        <span class="br-3"></span>
+      </button>
+    </nav>
+  </header>
+    
+
+<!--Información pagina 1 página de Bienvenida y Curiosidades LOL-->
+    <section id="bienvenida">
+      <div class="contBienvenida">
+      <h3>¡Bienvenid@! <br> ¿Estás interesad@ en descubrir en que consiste uno de los juegos más populares del mundo gamer y hacer parte de los más de 
+        100 millones de usuarios activos? <br> Si estás list@, ¡Vamos a conocer más!.</h3><a name="titulouno"></a>
+      </div>
+    <button id="conoceMas"><b>Conoce más</b></button>
+    </section>
+
+    <section id="queEsLol">
+      <div class="container">
+      <div class="img-container"></div>
+      <div class="texto">
+        <h2>¿Qué es LOL?</h2>
+        <br>
+        <p>League of Legends es un juego de estrategia por equipos en el que dos equipos conformados por cinco poderosos campeones se enfrentan para destruir la base del otro. Elige de entre más de 130 campeones para realizar jugadas épicas, asegurar asesinatos y destruir torretas mientras avanzas hacia la victoria.</p>        
+      </div>
+    </div>
+    </section>
+
+<!--Información pagina 2 informacion LOL"Conoce más"-->
+    <section id="detallesLol">
+      <div class="container"></div>
+      <h2>¡Lo que debes saber!</h2><a name="titulodos"></a>    
+      <div class="carta">
+        <h3>Objetivos de partida</h3>
+        <p>Cada equipo cuenta con una base, donde hay un Nexo. El objetivo de la partida es defender tu Nexo y destruir el del rival. Para ello tenemos que ayudar a nuestras tropas a destruir la fortaleza enemiga. Las tres calles o líneas que unen ambos Nexos y por donde se mueven los esbirros cuentan con dos torres exteriores, una que protege la entrada y dos más que protegen el Nexo. En total cada equipo cuenta con 11 torres.</p>
+      </div>
+      <div class="carta">
+        <h3>Campeones</h3>
+        <p>En LOL los personajes con los que vas a jugar son conocidos como “Campeones”, cada uno cuenta con una historia, estilo de juego y habilidades diferentes, cuando comienzas a jugar tu campeón será nivel 1 y podrás escoger una de las tres habilidades básicas con las que cuenta tu campeón, sin embargo, tu campeón también contará con dos habilidades más, una pasiva y la otra definitiva, la pasiva es propia de el y no tendrás que gastar puntos de habilidad para aprenderla, lo mismo no ocurre con la definitiva, a esta solo accederás al llegar al nivel 6.</p>
+      </div>
+      <div class="carta">
+        <h3>Objetos</h3>
+        <p>Los objetos sirven para incrementar de forma considerable los atributos de nuestro campeón. Cualquier campeón, por lo general, puede comprar cualquier objeto, pero no todos los objetos tienen utilidad para todos los campeones. Por ejemplo, un campeón que haga casi todo su daño con golpes básicos tendrá que comprar objetos que mejoren el daño, el impacto crítico y la velocidad de ataque.</p>
+      </div>
+      <div class="carta">
+        <h3>Jungla</h3>
+        <p>La jungla es un espacio neutral en el que encontrarás monstruos que solo te atacarán si tu lo haces primero, es un buen sitio para acorralar a un rival, en este caso, los monstruos actúan como esbirros, así que combatiendo con ellos obtendrás experiencia y oro cuando acabas con ellos, sin embargo, los que más te van a dar bonificaciones fuertes son los monstruos Dragón y Baron Nashor.</p>
+      </div>
+      <div class="carta">
+        <h3>Posiciones</h3>
+        <p>A medida que vas subiendo de nivel las posiciones de League of Legends son básicas si queremos ganar una partida. Los jugadores se reparten de la siguiente forma: uno a la calle superior (toplaner), uno a la calle central (midlaner), dos a la calle inferior (AD Carry y support) y el quinto a la jungla (jungla). Cada posición tiene muy definidos el tipo de campeones.</p>
+      </div>    
+    <br>
+    <button id="conoceLosCampeones"><b>Conoce los Campeones</b></button>
+  </section>
+  
+<!--Información pagina 3 "Conoce los campeones"-->
+  <section id="campeones">    
+      <div class="menu2">
+        <br><input type="search" id="search" class="search" placeholder="🔍 BUSCA TU CAMPEON"/>
+        <select id="buttonOrder">
+          <option value= "" disabled selected>🛡️ ORDENAR</option>
+          <option value="a-z">A - Z</option>
+          <option value="z-a">Z - A</option>
+        </select>  
+        <button id="buttonRoles" class="estiloBoton">ROLES</button>
+      </div>
+      <div class="instruccion1">
+        <p>¡Para más información haz clic sobre el campeon de tu interes!</p>  
+      </div>
+ <!--Información pagina 3 visualizar campeones por roles-->
+      <section id="campeonesxrol" class="campeonesxrol">
+        <div class="detalleCampeon"></div>  
+        <button type="submit" id="assassin" class="buttonRol"><img src="img/role-icon-assassin.png">ASESINOS</button>
+        <button type="submit" id="fighter" class="buttonRol"><img src="img/league-of-legends-fighter-icon-1.png">LUCHADORES</button>
+        <button type="submit" id="mage" class="buttonRol"><img src="img/Mage_icon.png">MAGOS</button>
+        <button type="submit" id="marksman" class="buttonRol"><img src="img/role_icon_marksman.png">TIRADORES</button>
+        <button type="submit" id="support" class="buttonRol"><img src="img/role_icon_support.png">APOYOS</button>
+        <button type="submit" id="tank" class="buttonRol"><img src="img/Tanque.png">TANQUES</button>
+      </section>
+    
+<!--Información pagina 3 visualizar detalles de los campeones-->  
+    <main id="container"></main>
+      <div id="myModal" class="modal hide">
+      <div class="modalContent">
+      <span class="close" id="close">&times;</span>
+      <div class="modalInfo" id="modalInfo">
+      </div>
+      </div>
+      </div>
+  </section>
+    <h4>Las estadísticas que todo jugador debe conocer</h4>
+    <h6>Explora con tu cursor</h6>
+  <section id="estadisticas" class="estadisticas">
+        <div class="sectionAvage">
+          <div class="divMapLol">
+            <div class="adelante card1"></div>
+            <div id="attackChampion" class="attackChampion styleAverage"></div>
+          </div>
+        </div>
+        <div class="sectionAvage">
+          <div class="divMapLol">
+            <div class="adelante card2"></div>
+            <div id="spellBlock" class="spellBlock styleAverage"></div>
+          </div>
+        </div>
+        <div class="sectionAvage">
+          <div class="divMapLol">
+            <div class="adelante card3"></div>
+            <div id="attackspeedperlevel" class="spellBlock styleAverage"></div>
+          </div>
+        </div>
+  </section>
+
+    <footer>
+      <p>Tat&Sof Inc. All rights reserved </p>      
+    </footer>
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
