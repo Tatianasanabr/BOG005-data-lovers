@@ -1,33 +1,33 @@
 //Función Ordenar
 
-export const alphabetOrder = (firstLetter, condition) => {
-  const result = firstLetter; 
-  if (condition == "a-z") {
-    result.sort ((a, b) => {
+export const ordenAlfabetico = (primeraLetra, direccionOrden) => {
+  const resultado = primeraLetra; 
+  if (direccionOrden === "a-z") {
+    resultado.sort ((a, b) => {
       if (a.name > b.name) {
         return 1;
       }
       return -1;
     });
   } 
-  if (condition === "z-a") {
-    result.sort ((a, b) => {
+  if (direccionOrden === "z-a") {
+    resultado.sort ((a, b) => {
       if (a.name < b.name) {
         return 1;    
       }
       return -1;
     });
   }
-  return result;
+  return resultado;
 };
 
 //Función filtrar
 
-export const roleFilter = (championsRol, choseFilter) => {
-  const byFilter = championsRol.filter((obj) => {
+export const rolFiltrado = (rolCampeones, filtroElegido) => {
+  const byFilter = rolCampeones.filter((obj) => {
     let filterResult = "";
-    for (let i =0; i < obj.tags.length; i += 1) {
-      if (obj.tags [i] === choseFilter) {
+    for (let i = 0; i < obj.tags.length; i += 1) {
+      if (obj.tags [i] === filtroElegido) {
         filterResult += obj.tags[i];
       }
     }
@@ -61,4 +61,3 @@ export const calculoStats = (data, entrada) => {
   }
   return result; 
 };
-

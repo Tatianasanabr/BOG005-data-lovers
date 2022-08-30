@@ -1,12 +1,12 @@
 /*console.log(lol.data.Aatrox.blurb);*/
 
-//Importacion información nombres campeones
+//Importacion información nombres campeones 
 import lol from './data/lol/lol.js';
 
 import {  
   namFilt,
-  alphabetOrder,
-  roleFilter,
+  ordenAlfabetico,
+  rolFiltrado,
   calculoStats,
 } from './data.js';
 
@@ -100,13 +100,13 @@ const buttonOrder = document.querySelector('#buttonOrder');
 buttonOrder.addEventListener('change', () => {
   const valueOrder = buttonOrder.value;
   container.innerHTML = '';
-  showData(alphabetOrder(data, valueOrder));
+  showData(ordenAlfabetico(data, valueOrder));
 });
 
 // Buscar
 const cleanContainer = () => {
   container.innerHTML = '';
-  return false;
+  //return false;
 };
 
 search.addEventListener('keyup', (event) => {
@@ -141,43 +141,38 @@ menu1Links.forEach(menu1Links => {
 const assassin = document.getElementById('assassin');
 assassin.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Assassin'));
+  showData(rolFiltrado(data, 'Assassin'));
 });
 
 const fighter = document.getElementById('fighter');
 fighter.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Fighter'));
+  showData(rolFiltrado(data, 'Fighter'));
 });
 
 const mage = document.getElementById('mage');
 mage.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Mage'));
+  showData(rolFiltrado(data, 'Mage'));
 });
 
 const marksman = document.getElementById('marksman');
 marksman.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Marksman'));
+  showData(rolFiltrado(data, 'Marksman'));
 });
 
 const support = document.getElementById('support');
 support.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Support'));
+  showData(rolFiltrado(data, 'Support'));
 });
 
 const tank = document.getElementById('tank');
 tank.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Tank'));
+  showData(rolFiltrado(data, 'Tank'));
 });
-
-
-
-
-
 
 const attackChampion = document.querySelector("#attackChampion");
 attackChampion.innerHTML = ` Daño de ataque promedio: "${calculoStats(arrayCampeones, "attackdamage")}"`;

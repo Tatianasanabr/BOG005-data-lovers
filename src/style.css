@@ -259,7 +259,6 @@ height: 100%;
 background-color: rgba(0, 0, 0, 0.6);
 }
 
-
 .modalInfo {
   border-radius: 0.1em;
   margin: 0.2em;
@@ -581,6 +580,23 @@ footer {
   background-image: url(img/card3.png);
   background-size: cover;
   background-position: center;
+}
+
+h4 {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+  background-color: black;
+  color: #dff9fb;
+  border-radius: 50px;
+}
+
+h6 {
+  text-align: center;
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+  background-color: black;
+  color: #c7ecee;
 }
   
 
