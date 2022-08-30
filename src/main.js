@@ -4,10 +4,10 @@
 import lol from './data/lol/lol.js';
 
 import {  
-  namFilt,
-  alphabetOrder,
-  roleFilter,
-  calculoStats,
+  buscarNombre,
+  ordenAlfabetico,
+  rolFiltrado,
+  calculoEstadistico,
 } from './data.js';
 
  const dataLol = (lol.data);
@@ -100,7 +100,7 @@ const buttonOrder = document.querySelector('#buttonOrder');
 buttonOrder.addEventListener('change', () => {
   const valueOrder = buttonOrder.value;
   container.innerHTML = '';
-  showData(alphabetOrder(data, valueOrder));
+  showData(ordenAlfabetico (data, valueOrder));
 });
 
 // Buscar
@@ -111,7 +111,7 @@ const cleanContainer = () => {
 
 search.addEventListener('keyup', (event) => {
   const term = event.target.value.toLowerCase();
-  const filterChampions = namFilt(data, term);
+  const filterChampions = buscarNombre (data, term);
   cleanContainer();
   showData(filterChampions);
 });
@@ -129,59 +129,58 @@ ham.addEventListener("click", () => {
 
 
 // Cerrar menu
-/*const menu1Links =document.querySelectorAll('.menu1 a[href^="#');
+const menu1Links =document.querySelectorAll('.menu1 a[href^="#"]');
 
 menu1Links.forEach(menu1Links => {
   menu1Links.addEventListener("click", function(){
-    menu1Links.classList.remove("menu_abierto");
+    enlaces.classList.remove("activado");
+    barras.forEach(child => {child.classList.toggle("animado")});
   })
-});*/
+});
 
 // Filtrar por Roles
 const assassin = document.getElementById('assassin');
 assassin.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Assassin'));
+  showData(rolFiltrado(data, 'Assassin'));
 });
 
 const fighter = document.getElementById('fighter');
 fighter.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Fighter'));
+  showData(rolFiltrado(data, 'Fighter'));
 });
 
 const mage = document.getElementById('mage');
 mage.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Mage'));
+  showData(rolFiltrado(data, 'Mage'));
 });
 
 const marksman = document.getElementById('marksman');
 marksman.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Marksman'));
+  showData(rolFiltrado(data, 'Marksman'));
 });
 
 const support = document.getElementById('support');
 support.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Support'));
+  showData(rolFiltrado(data, 'Support'));
 });
 
 const tank = document.getElementById('tank');
 tank.addEventListener('click', () => {
   container.innerHTML = '';
-  showData(roleFilter(data, 'Tank'));
+  showData(rolFiltrado(data, 'Tank'));
 });
 
 
-
-
-
+//Realizar Calculo
 
 const attackChampion = document.querySelector("#attackChampion");
-attackChampion.innerHTML = ` Daño de ataque promedio: "${calculoStats(arrayCampeones, "attackdamage")}"`;
+attackChampion.innerHTML = ` Daño de ataque promedio: "${calculoEstadistico (arrayCampeones, "attackdamage")}"`;
 const spellBlock = document.querySelector("#spellBlock");
-spellBlock.innerHTML = ` Bloque de Hechizos: "${calculoStats(arrayCampeones, "spellblock")}`;
+spellBlock.innerHTML = ` Bloque de Hechizos: "${calculoEstadistico (arrayCampeones, "spellblock")}`;
 const attackspeedperlevel = document.querySelector("#attackspeedperlevel");
-attackspeedperlevel.innerHTML = ` Velolcidad de ataque por nivel: "${calculoStats(arrayCampeones, "attackspeedperlevel")}`;
+attackspeedperlevel.innerHTML = ` Velocidad de ataque por nivel: "${calculoEstadistico (arrayCampeones, "attackspeedperlevel")}`;
