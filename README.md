@@ -2,9 +2,10 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+* [1. Definición de Producto](#1-definición-de-producto)
+* [2. Historias de Usuario](#2-historias-de-usuario)
+* [3. Diseño de la Interfaz de Usuario](#3-diseño-de-la-interfaz-de-usuario)
+
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Hacker edition](#6-hacker-edition)
@@ -14,86 +15,51 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Definición de producto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+  * **Usuario Objetivo:** El producto va dirgido a aquellas personas nuevas en el mundo de los videojuegos las cuales podrían estar interesadas en conocer de que se trata el juego y sus personajes. 
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+  * **Esquema general:** La aplicación web contará con las siguientes secciones:
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
+    1. **Página inicial:** en ella se define un menú el cual estará fijado para permitir la navegación por la página. También se describe un mensaje de bienvenida para el nuevo jugador y una breve descripción de lo qué es el juego. La página inicial se complementa con un botón que invita al nuevo usuario a conocer más si se encuentra interesado.
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+    2. **Segunda página:** en ella se describen 5 conceptos principales (“lo que debes saber”) sobre el juego. Si el usuario ya se encuentra completamente interesado, se cuenta con un botón “Conoce los Campeones” para así acceder a conocer cada personaje con sus diferentes características.
 
-## 2. Resumen del proyecto
+    3. **Tercera página:** en ella se cuenta con una opción para buscar el personaje digitando su nombre, un campo para ordenar todos los personajes de la A-Z y de la Z-A y un botón llamado “ROLES” el cual nos muestra 6 roles: Asesinos, Luchadores, Tiradores, Magos, Apoyos y Tanques. Al dar clic sobre cada rol se encontrarán agrupados todos los personajes que pertenecen a ese rol.  
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+    También se puede visualizar cada personaje con su respectiva imagen y nombre. Al dar clic sobre cada uno, se mostrará una ventana donde se podrá observar información más detallada del personaje como su título y su nivel de poder en habilidades como defensa y ataque.
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+    4. **Cuarta página:** en ella se describe información adicional como estadísticas donde por medio de tarjetas se muestra al usuario el promedio de “Daño en ataque”, “Bloque de hechizos” y “Velocidad de ataque por nivel” para la totalidad de los personajes.
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
 
-Estos son datos que te proponemos:
+## 2. Historias de Usuario
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+## 3. Diseño de la Interfaz de Usuario
 
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
+ * **Prototipo de baja fidelidad**
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
+   - **Historia de Usuaria 1:** página de Bienvenida e información adicional sobre LOL.
+    ![Alt](/prototype/Bienvenida%20HU1.jpg)
+  
+    ![Alt](/prototype/HU1.jpg)
 
-* [Harry Potter](src/data/harrypotter/harry.json).
-  En este set encontrarás una lista de los personajes,libros pociones
-  y hechizos de toda la saga de
-  [Harry Potter](https://harrypotter.fandom.com).
-  - [Investigación con seguidoras de Harry Potter](src/data/harrypotter/README.md)
+  - **Historia de Usuaria 2 y 3:** visualización de todos los campeones y opciones para buscar y ordenar.
+    ![Alt](/prototype/HU2%20y%20HU3.jpg)
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+  - **Historia de Usuaria 4:** visualización de roles y opción de filtrado de campeones por rol. 
+    ![Alt](/prototype/HU4.jpg)
 
-## 3. Objetivos de aprendizaje
+    - **Historia de Usuaria 5:** presentación de datos estadistico a traves de tarjetas.
+    ![Alt](/prototype//HU5.jpg)
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+ * **Prototipo de alta fidelidad**
+
+ * **Testeos de Usabilidad**
+
+ 
 
 ### HTML
 

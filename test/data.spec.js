@@ -85,7 +85,7 @@ const ordenDescent = [
 ];
 
 //Variable para test filtrar
-const filtroMago = [
+const filtroxRol = [
   {
     name: 'Ahri',
     tags: ['Mage', 'Assassin'],
@@ -93,7 +93,7 @@ const filtroMago = [
   {
     name: 'Diana',
     tags: ['Fighter', 'Mage'],
-  },
+  },  
 ];
 
 //Variable para test buscar
@@ -129,9 +129,8 @@ describe('rolFiltrado', () => {
   });
 
   it('retornar el campeon filtrado por rol', () => {
-    expect(rolFiltrado(dataTest, 'Mage')).toEqual(filtroMago );
-  });
-  
+    expect(rolFiltrado(dataTest, 'Mage')).toEqual(filtroxRol);
+  });   
 });
 
 //Buscar
