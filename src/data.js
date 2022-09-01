@@ -37,7 +37,8 @@ export const rolFiltrado = (rolCampeones, filtroEscogido) => {
 };
 
 // Buscar
-export const buscarNombre = (data, palabrasDigitadas) => data.filter(({ name }) => name.toLowerCase().includes(palabrasDigitadas));
+export const buscarNombre = (data, palabrasDigitadas) => data.filter(({ name }) => name.toLowerCase().startsWith(palabrasDigitadas));
+
 
 //Estadistica - cálculo
 export const calculoEstadistico = (data, caracteristicas) => {
@@ -61,3 +62,25 @@ export const calculoEstadistico = (data, caracteristicas) => {
   return resultado; 
 };
 
+/* const infoNombre = [
+  {
+    name: 'Ahri',
+  },
+  {
+    name: 'Akali',
+  },
+  {
+    name: 'Nunu',
+  },
+  {
+    name: 'Zac',
+  },
+  {
+    name: 'Diana',
+  },
+];
+
+console.log(buscarNombre(infoNombre, 'd')); // [Diana]
+console.log(buscarNombre(infoNombre, 'ac')); // [Zac]
+console.log(buscarNombre(infoNombre, 'a')); // [Ahri, Akali, Zac, Diana]
+console.log(buscarNombre(infoNombre, 'A')); // [Ahri, Akali, Zac, Diana] */
