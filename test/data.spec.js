@@ -2,6 +2,7 @@ import {
   buscarNombre,
   ordenAlfabetico,
   rolFiltrado,
+  calculoEstadistico,
 } from '../src/data.js';
 
 //Definición variables
@@ -99,10 +100,10 @@ const filtroxRol = [
 //Variable para test buscar
 const buscarCampeon = [
   {
-    name: 'Ahri',
+    name: 'Ahri'
   },
   {
-    name: 'Akali',
+    name: 'Akali'
   },
 ]; 
 
@@ -138,10 +139,13 @@ describe('buscarNombre', () => {
   it('es una función', () => {
     expect(typeof buscarNombre).toBe('function');
   });
+
   it('devolver el filtro de campeón por la primera letra A', () => {
-    expect(buscarNombre(infoNombre , 'name', 'A')).toEqual(buscarCampeon);
+    expect(buscarNombre(infoNombre, 'name', 'A')).toEqual(buscarCampeon);
   });
+  
 }); 
+
 
 /*describe('example', () => {
   it('is a function', () => {
