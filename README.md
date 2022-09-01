@@ -103,7 +103,7 @@ Testeamos nuestra aplicación con 5 usuarios externos de lABORATORIA, todo esto 
 
   ![Alt](/prototype/TU3.png)
 
-  - *Análisis:* A las siguientes tres preguntas que abarcan las historias 1 y 2 de nuestr proyecto recibimos una respuesta afirmativa:
+  - *Análisis:* A las siguientes tres preguntas que abarcan las historias 1 y 2 de nuestro proyecto recibimos una respuesta afirmativa:
 
   ![Alt](/prototype/TU4.png)
 
@@ -117,7 +117,7 @@ Testeamos nuestra aplicación con 5 usuarios externos de lABORATORIA, todo esto 
 
   *Solución:* Verificamos cada parte que invita al usuario a conocer más e hicimos algunos ajustes de texto y demás, sin embargo, también tuvimos en cuenta que es probable que sencillamente el usuario no se encuentre interesado en conocer más ya que no es algo que manejen cotidianamente o tengan presente en la base de su entretenimiento:
 
-    ![Alt](/prototype/TU7.png)
+  ![Alt](/prototype/TU7.png)
 
   - *Análisis:* A la pregunta "¿Si estuvo interesado en acceder a los roles por campeón, fue sencillo acceder a esto?", el 80% indicó que si estuvo interesado y si fue sencillo acceder a la información.
 
@@ -125,20 +125,20 @@ Testeamos nuestra aplicación con 5 usuarios externos de lABORATORIA, todo esto 
 
   *Solución:* Verificamos cada parte que invita al usuario a conocer más sobre los roles e hicimos algunos ajustes de texto y demás, sin embargo, también tuvimos en cuenta que es probable que sencillamente el usuario no se encuentre interesado en conocer más ya que no es algo que manejen cotidianamente o tengan presente en la base de su entretenimiento:
 
-    ![Alt](/prototype/TU8.png)
+  ![Alt](/prototype/TU8.png)
 
-  - *Análisis:* A la pregunta "¿Logró ver los campeones que pertenecen a cada Rol?", el 80% indicó que si logró ver esta información.
+  - *Análisis:* A la pregunta "¿Logró ver los campeones que pertenecen a cada Rol?", el 80% indicó que si logró ver esta información solicitada.
 
   *Problema:* El 20% restante indicó no haber estado interesado.
 
   *Solución:* Verificamos que el botón de "Roles" sea llamativo y adecuado para que el usuario ingrese a verificar esta información, encontramos todo funcionando de manera correcta, sin embargo, también tuvimos en cuenta que es probable que sencillamente el usuario no se encuentre interesado en los roles  ya que no es algo que manejen cotidianamente o tengan presente en la base de su entretenimiento:
 
-    ![Alt](/prototype/TU9.png)
+  ![Alt](/prototype/TU9.png)
 
   - *Análisis:* A la pregunta "¿Fue fácil acceder a las estadísticas de la aplicación?", el 60% indicó que si logró acceder esta información de manera sencilla.
 
   *Problema:* El 20% restante indicó que el proceso no fue sencillo, indagando un poco más evidenciamos que la persona que respondió esto no pudo hacer uso de la funcionalidad de movilizar el cursor sobre la imágen para que la misma rotara y pudiera validar las estadísticas, es el único usuario que reporta este error, así bien, un usuario más indica que en su concepto son pocas estadísticas.
 
-  *Solución:* Verificamos el correcto funcionamiento en varios dispositivos y no encontramos error alguno, así mismo, en cuanto a la valiosa observación del usuario que manifiesta la poca cantidad de estadísticas por el momento por motivos de tiempo no podemos acceder a sus peticiones e implementar más estadísticas por el momento:
+  *Solución:* Verificamos el correcto funcionamiento en varios dispositivos y no encontramos error alguno, así mismo, en cuanto a la valiosa observación del usuario que manifiesta la poca cantidad de estadísticas por el momento por motivos de tiempo no podemos acceder a sus peticiones e implementar más estadísticas por el momento, pero, serán implementadas a futuro:
 
-    ![Alt](/prototype/TU11.png)
+  ![Alt](/prototype/TU11.png)
