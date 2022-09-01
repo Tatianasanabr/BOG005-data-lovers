@@ -1,6 +1,6 @@
 /*console.log(lol.data.Aatrox.blurb);*/
 
-//Importacion información nombres campeones
+//Importacion información nombres campeones 
 import lol from './data/lol/lol.js';
 
 import {  
@@ -106,7 +106,7 @@ buttonOrder.addEventListener('change', () => {
 // Buscar
 const cleanContainer = () => {
   container.innerHTML = '';
-  return false;
+  //return false;
 };
 
 search.addEventListener('keyup', (event) => {

@@ -57,7 +57,6 @@ export const calculoEstadistico = (data, caracteristicas) => {
       resultado = (elementos.reduce((acumulador, valorActual) => (acumulador + valorActual.attackspeedperlevel), 0) / 134).toFixed(2);
       break;
     default:
-      break;
   }
   return resultado; 
 };
