@@ -103,9 +103,43 @@ const buscarCampeon = [
     name: 'Ahri'
   },
   {
-    name: 'Akali'
+    name: 'Akali',
   },
-]; 
+];
+
+//Variable para test calculo
+const calculoEstadistica = [
+  {
+    id: "Illaoi",
+    key: "420",
+    name: "Illaoi",
+    stats: {
+      attackdamage: 60,
+      spellblock: 32.1,
+      attackspeedperlevel: 2.5,
+    },
+  },
+  {
+    id: "Jayce",
+    key: "126",
+    name: "Jayce",
+    stats: {
+      attackdamage: 50.38,
+      spellblock: 30,
+      attackspeedperlevel: 3,
+    },
+  },
+  {
+    id: "Kalista",
+    key: "429",
+    name: "Kalista",
+    stats: {
+      attackdamage: 63,
+      spellblock: 30,
+      attackspeedperlevel: 2.5,
+    },
+  },
+];
 
 //Definición test 
 //Ordenar
@@ -141,29 +175,25 @@ describe('buscarNombre', () => {
   });
 
   it('devolver el filtro de campeón por la primera letra A', () => {
-    expect(buscarNombre(infoNombre, 'name', 'A')).toEqual(buscarCampeon);
+    expect(buscarNombre(infoNombre, 'A')).toEqual(buscarCampeon);
   });
-  
 }); 
 
-
-/*describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+//Cálculo 
+describe('calculoEstadistico', () => {
+  it('es una función', () => {
+    expect(typeof calculoEstadistico).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('Debe retornar el promedio de ATTACKDAMAGE de los campeones', () => {
+    expect(calculoEstadistico(calculoEstadistica, 'attackdamage')).toBe('1.29');
+  });
+  it('Debe retornar el promedio de SPELLBLOCK de los campeones', () => {
+    expect(calculoEstadistico(calculoEstadistica, 'spellblock')).toBe('0.69');
+  });
+  it('Debe retornar el promedio de ATTACKSPEEDPERLEVEL de los campeones', () => {
+    expect(calculoEstadistico(calculoEstadistica, 'attackspeedperlevel')).toBe('0.06');
   });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});*/
